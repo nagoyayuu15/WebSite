@@ -1,0 +1,66 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN" "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
+<!-- Created using Krita: https://krita.org -->
+<svg xmlns="http://www.w3.org/2000/svg" 
+    xmlns:xlink="http://www.w3.org/1999/xlink"
+    width="400pt"
+    height="400pt"
+    viewBox="0 0 400 400">
+<linearGradient id="background-grad" x1="0" x2="0.5" y1="0" y2="1">
+    <stop offset="0%" stop-color="#ffb36c" />
+    <stop offset="90%" stop-color="#fd8873"/>
+    <stop offset="100%" stop-color="#ff8989" />
+</linearGradient>
+<defs/>
+<g
+    transform="translate(15,0) rotate(-50, 240, 200) scale(0.8)"
+>
+    <path 
+        id="shape0" 
+        fill="url(#background-grad)" 
+        fill-rule="evenodd" 
+        stroke="none" 
+        stroke-linecap="square" 
+        stroke-linejoin="bevel" 
+        d="M 0 200 L 120 320 L 400 320 L 400 80 L 120 80 L 0 200" 
+    />
+    <g>
+        <path 
+            id="shape1" 
+            fill="#e6e6e6" 
+            fill-rule="evenodd" 
+            stroke="none" 
+            stroke-linecap="square" 
+            stroke-linejoin="bevel" 
+            d="M 130 100 L 130 300 L 160 300 L 160 230 L 220 230 L 220 300 L 250 300 L 250 100 L 220 100 L 220 200 L 160 200 L 160 100" 
+        />
+        <path 
+            id="shape2"  
+            fill="#e6e6e6"
+            fill-rule="evenodd" 
+            stroke="none" 
+            stroke-linecap="square" 
+            stroke-linejoin="bevel" 
+            d="M 265 100 L 265 300 L 295 300 L 295 230 C 320.8 228.1 359.2 228.9 345 300 L 375 300 C 375 250 375 200 295 200 L 295 100" 
+        />
+        <path 
+            id="shape3"  
+            fill="#e6e6e6"
+            fill-rule="evenodd" 
+            stroke="none" 
+            stroke-linecap="square" 
+            stroke-linejoin="bevel" 
+            d="M 270 275 L 270 300 L 370 300 L 370 275" 
+        />
+        <path 
+            id="shape4"  
+            fill="#e6e6e6"
+            fill-rule="evenodd" 
+            stroke="none" 
+            stroke-linecap="square" 
+            stroke-linejoin="bevel" 
+            d="M 230 200 L 230 230 L 285 230 L 285 200" 
+        />
+    </g>
+</g>
+</svg>

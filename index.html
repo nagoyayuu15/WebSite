@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<head>
+    <title>Hello.</title>
+    <!-- <link href="style.css" rel="stylesheet" type="text/css" media="all"> -->
+    <style>
+        html, body {
+            height: 99%;
+            font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        }
+    </style>
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <meta name="description" content="document root of my web server on the vps" />
+</head>
+<body>
+    <div class="rows">
+        <div></div>
+        
+        <div class="colmuns">
+            <div class="grid_block"></div>
+            <div class="grid_block letter" id="letter1">
+                    <div class="detector"></div>
+                H
+            </div>
+            <div class="grid_block letter" id="letter2">
+                    <div class="detector"></div>
+                e
+            </div>
+            <div class="grid_block letter" id="letter3">
+                    <div class="detector"></div>
+                l
+            </div>
+            <div class="grid_block letter" id="letter4">
+                <div class="detector"></div>
+                l
+            </div>
+            <div class="grid_block letter" id="letter5">
+                    <div class="detector"></div>
+                o
+            </div>
+            <div class="grid_block letter" id="letter6">
+                    <div class="detector"></div>
+                .
+            </div>
+            <div class="grid_block"></div>
+            
+            <style>
+                .letter{
+                    transition: all 0.5s 0s ease;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 1800%;
+                    pointer-events: none;
+                    color: rgb(43, 43, 43);
+                    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+                .detector{
+                    position: absolute;
+                    z-index: 1;
+                    pointer-events: auto;
+                }
+                #letter1 .detector{
+                    top:28%;
+                    height: 54%;
+                    left: 12%;
+                    width: 76%;
+                }
+                #letter2 .detector{
+                    top:40%;
+                    height: 42%;
+                    left: 8%;
+                    width: 86%;
+                    border-radius: 10%;
+                }
+                #letter3 .detector{
+                    top:22%;
+                    height: 60%;
+                    left: 10%;
+                    width: 84%;
+                    border-radius: 10%;
+                }
+                #letter4 .detector{
+                    top:22%;
+                    height: 60%;
+                    left: 10%;
+                    width: 84%;
+                    border-radius: 10%;
+                }
+                #letter5 .detector{
+                    top:40%;
+                    height: 42%;
+                    left: 7.5%;
+                    width: 85%;
+                    border-radius: 10%;
+                }
+                #letter6 .detector{
+                    top:70%;
+                    height: 12%;
+                    left: 7.5%;
+                    width: 85%;
+                    border-radius: 10%;
+                }
+                #letter1:hover{color:rgb(255, 87, 75);}
+                #letter2:hover{color:rgb(255, 171, 74);}
+                #letter3:hover{color:rgb(255, 245, 109);}
+                #letter4:hover{color:rgb(164, 255, 129);}
+                #letter5:hover{color:rgb(135, 255, 205);}
+                #letter6:hover{color:rgb(85, 173, 255);}
+            </style>
+        </div>
+        <style>
+            .colmuns{
+                height: 100%;
+                display:grid;
+                grid-template-columns: 2fr 0.6fr 0.6fr 0.4fr 0.4fr 0.6fr 0.2fr 2fr;
+                grid-template-rows: 1fr;
+                position: relative;
+                user-select: none;
+            }
+        </style>
+
+        <div></div>
+    </div>
+    <style>
+        .rows{
+            height: 100%;
+            display:grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 1fr 1fr;
+            position: relative;
+        }
+    </style>
+</body>

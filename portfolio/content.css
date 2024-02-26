@@ -1,0 +1,37 @@
+
+.content{
+    overflow-x: hidden;
+    z-index: 3000;
+    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+.feed{
+    background-color: rgb(240, 240, 240);
+    z-index: 3001;
+    overflow-wrap: break-word;
+}
+
+/* to be responsible */
+@media screen and (max-width: 1000px) {/* for smartphone */
+    .content{
+        margin-top: 270px;
+        margin-bottom: 875px;
+    }
+    .feed{
+        width: 95%;
+        left: 2.5%;
+        margin: 5px;
+        border-radius: 10px;
+    }
+}
+@media screen and (min-width: 1000px) {/* for pc */
+    .content{
+        margin-top: 70px;
+        margin-bottom: 320px;
+    }
+    .feed{
+        width: 80%;
+        left: 10%;
+        margin: 5px;
+        border-radius: 5px;
+    }
+} 

@@ -1,0 +1,1 @@
+const domain = "https://vps.hbenpitsu.net"
