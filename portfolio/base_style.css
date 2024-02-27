@@ -6,7 +6,9 @@ body {
     width: 100%;
     min-height: 100%;
     background-color: rgb(226, 226, 226);
-    color:rgb(56, 56, 56);
+    color:rgb(77, 77, 77);
+    z-index: 1500;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 html {
@@ -21,7 +23,7 @@ ul {
 
 a {
     text-decoration: none;
-    color: rgb(56, 56, 56);
+    color: rgb(77, 77, 77);
 }
 
 .phantom_anchor {

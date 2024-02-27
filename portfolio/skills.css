@@ -1,8 +1,26 @@
 
-#header_title>img.pc {filter: grayscale(10%) hue-rotate(160deg) ;}
+#header_title.norm img {filter: grayscale(10%) hue-rotate(160deg) ;}
+
+.abilities.hash h1{
+    color: hsl(170, 50%, 40%)
+}
+.products.hash h1{
+    color: hsl(190, 50%, 40%)
+}
 
 .button {
-    background-color: blue;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s 0s ease;
+    background-color: hsl(0, 0%, 90%);
+}
+
+.button img {
+    width: 70%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .feed {
@@ -97,7 +115,6 @@
         height: 140px;
         margin-top: 15px;
         margin-left: 15px;
-        cursor: pointer;
         border-radius: 10px;
     }
 

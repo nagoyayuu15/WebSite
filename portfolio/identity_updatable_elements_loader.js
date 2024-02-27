@@ -66,4 +66,7 @@ history_done = Promise.all([circle_svg,history_recodes]).then((res)=>{
 })
 
 await Promise.all([identity_done,hobby_done,comment_done,history_done])
+set_colors(".content>.feed_hobby>ul>li",55,48,35,6,5,5)
+set_stroke_colors(".content>.feed_carrier>ul>li.important svg",55,38,68,6,5,1)
+set_colors(".content>.feed h1",55,50,62,6,7,1)
 }

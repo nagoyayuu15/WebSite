@@ -1,22 +1,22 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfolio-Skills | HB</title>
-    <meta nama="description" content="a page of my portfolio site to explain my abilities and experiences.">
+    <title>Portfolio-Identity | HB</title>
+    <meta nama="description" content="home page of my portfolio site.">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./base_style.css">
     <link rel="stylesheet" href="./cover.css">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./content.css">
-    <link rel="stylesheet" href="./skills.css">
+    <link rel="stylesheet" href="./identity.css">
     <meta charset="utf-8">
     <meta http-equiv="Cache-Control" content="no-cache">
 </head>
 <body>
 
     <div class="cover">
-        <div class="cover_image bluegreen">
+        <div class="cover_image yellow">
             <img src="/icon.svg" alt="">
             <div>P</div>
             <div>o</div>
@@ -29,34 +29,36 @@
             <div>o</div>
         </div>
     </div>
-    <div class="phantom_anchor" id="products"></div>
+
     <div class="header_floating_part"></div>
     <div class="header"></div>
-    
+    <div class="phantom_anchor" id="identity"></div>
+
     <div class="content">
-        <div class="feed products hash">
-            <h1># Products</h1>
-            <div class="buttons">
-                <div class="button">NN</div>
-                <div class="button">Translator</div>
+        <div class="feed feed_identity">
+            <div class="anotation">
+                <h1># Identity</h1>
+                <div class="anotation-content">
+                </div>
             </div>
+            <img class="face_picture" src="./face.jpg">
         </div>
-        <div class="feed products instance">
-            <div class="field">
-                <div class="section dummy"></div>
-            </div>
+        <div class="feed feed_carrier">
+            <div class="phantom_anchor" id="carrier"></div>
+            <h1># History</h1>
+            <ul></ul>
         </div>
-        <div class="feed abilities hash">
-            <div class="phantom_anchor" id="ability"></div>
-            <h1># Ability</h1>
-            <div class="buttons">
-                <div class="button"><img src="/portfolio/ts-logo-256.svg"></div>
-            </div>
+        <div class="feed feed_hobby">
+            <div class="phantom_anchor" id="hobby"></div>
+            <h1># Favorite</h1>
+            <ul class="main">
+            </ul>
         </div>
-        <div class="feed abilities instance">
-            <div class="field">
-                <div class="section dummy"></div>
-            </div>
+        <div class="feed feed_comment">
+            <div class="phantom_anchor" id="comment"></div>
+            <h1># Comment</h1>
+            <p class="main">
+            </p>
         </div>
     </div>
 
@@ -65,13 +67,11 @@
 </body>
 <script src="./header_animation.js"></script>
 <script src="./base_elements_loader.js"></script>
-<script src="./scroller.js"></script>
-<script src="./fecher.js"></script>
+<script src="./identity_updatable_elements_loader.js"></script>
 <script src="./color_distributer.js"></script>
-<script src="./skills_updatable_elements_loader.js"></script>
+<script src="./scroller.js"></script>
 <script src="./cover.js"></script>
 <script>
     Promise.all([load_base_elements(),load_elements()]).then(scroll_to_url_hash).then(reveal)
-    apply_scroller()    
 </script>
 </html>

@@ -114,8 +114,11 @@
 }
 @media screen and (min-width: 1000px) {/* for pc */
     .footer{
-        height: 300px;
+        height: 310px;
         display: flex;
+    }    
+    .footer .site_map>ul>li{
+        margin-right: 10px;
     }
     .footer_content{
         margin: 50px;

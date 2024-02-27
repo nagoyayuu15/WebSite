@@ -1,0 +1,50 @@
+
+.cover {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 18000;
+    background-color: rgb(226, 226, 226);
+    transition: all 0.3s 0.3s ease;
+    opacity: 1;    
+    display: flex;
+    justify-content: center;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.cover.revealed{
+    z-index: 1;
+    opacity: 0;
+}
+
+.cover_image.red img {filter: grayscale(40%) hue-rotate(-30deg) ;}
+.cover_image.yellow img {filter: grayscale(10%) hue-rotate(25deg) ;}
+.cover_image.bluegreen img {filter: grayscale(10%) hue-rotate(160deg) ;}
+.cover_image.purple img {filter: grayscale(10%) hue-rotate(250deg);}
+
+.cover_image {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* to be responsible */
+@media screen and (max-width: 1000px) {/* for smartphone */    
+    .cover_image div {
+        font-size: 150px;
+        font-weight: 460;
+    }
+    .cover_image img {
+        width: 300px;
+}
+}
+
+@media screen and (min-width: 1000px) {/* for pc */
+    .cover_image div {
+        font-size: 150px;
+        font-weight: 460;
+    }
+    .cover_image img {
+        width: 300px;
+    }
+} 

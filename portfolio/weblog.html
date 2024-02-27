@@ -6,13 +6,29 @@
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./base_style.css">
+    <link rel="stylesheet" href="./cover.css">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./content.css">
     <link rel="stylesheet" href="./weblog.css">
     <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
 </head>
 <body>
 
+    <div class="cover">
+        <div class="cover_image purple">
+            <img src="/icon.svg" alt="">
+            <div>P</div>
+            <div>o</div>
+            <div>r</div>
+            <div>t</div>
+            <div>f</div>
+            <div>o</div>
+            <div>l</div>
+            <div>i</div>
+            <div>o</div>
+        </div>
+    </div>
     <div class="header_floating_part"></div>
     <div class="header"></div>
 
@@ -36,5 +52,8 @@
 </body>
 <script src="./header_animation.js"></script>
 <script src="./base_elements_loader.js"></script>
-<script>load_base_elements()</script>
+<script src="./color_distributer.js"></script>
+<script src="./scroller.js"></script>
+<script src="./cover.js"></script>
+<script>Promise.all([load_base_elements()]).then(scroll_to_url_hash).then(reveal)</script>
 </html>

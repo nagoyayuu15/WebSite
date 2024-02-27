@@ -1,58 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Portfolio-Top | HB</title>
+    <title>Portfolio-Identity | HB</title>
     <meta nama="description" content="home page of my portfolio site.">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./footer.css">
     <link rel="stylesheet" href="./base_style.css">
+    <link rel="stylesheet" href="./cover.css">
     <link rel="stylesheet" href="./header.css">
     <link rel="stylesheet" href="./content.css">
     <link rel="stylesheet" href="./index.css">
     <meta charset="utf-8">
+    <meta http-equiv="Cache-Control" content="no-cache">
 </head>
 <body>
+    <div class="cover"></div>
 
-    <div class="header_floating_part"></div>
-    <div class="header"></div>
-    <div class="phantom_anchor" id="identity"></div>
-
-    <div class="content">
-        <div class="feed feed_identity">
-            <div class="anotation">
-                <h1># Identity</h1>
-                <div class="anotation-content">
-                </div>
-            </div>
-            <img class="face_picture" src="./face.jpg">
+    <div class="wrapper">
+        <div id="header_title" class="red">
+            <img src="/icon.svg" alt="[ICON]">
+            <div>P</div>
+            <div>o</div>
+            <div>r</div>
+            <div>t</div>
+            <div>f</div>
+            <div>o</div>
+            <div>l</div>
+            <div>i</div>
+            <div>o</div>
         </div>
-        <div class="feed feed_carrier">
-            <div class="phantom_anchor" id="carrier"></div>
-            <h1># History</h1>
-            <ul></ul>
-        </div>
-        <div class="feed feed_hobby">
-            <div class="phantom_anchor" id="hobby"></div>
-            <h1># Favorite</h1>
-            <ul class="main">
-            </ul>
-        </div>
-        <div class="feed feed_comment">
-            <div class="phantom_anchor" id="comment"></div>
-            <h1># Comment</h1>
-            <p class="main">
-            </p>
-        </div>
+        <ul>
+            <li>
+                <ul>
+                    <li class="page_name">Identity</li>
+                    <li class="headline"><a href="./identity.html#identity">Identity</a></li>
+                    <li class="headline"><a href="./identity.html#carrier">History</a></li>
+                    <li class="headline"><a href="./identity.html#hobby">Favorite</a></li>
+                    <li class="headline"><a href="./identity.html#comment">Comment</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="page_name">Skills</li>
+                    <li class="headline"><a href="./skills.html#products">Products</a></li>
+                    <li class="headline"><a href="./skills.html#abilities">Abilities</a></li>
+                </ul>
+            </li>
+            <li>
+                <ul>
+                    <li class="page_name">Weblog</li>
+                    <li class="headline"><a href="./weblog.html#weblog">Weblog</a></li>
+                    <li class="headline"><a href="./weblog.html#bookshelf">Bookshelf</a></li>
+                </ul>
+            </li>
+        </ul>
+        <div class="copy"><a href="./to_be_copied.html">Copy</a></div>
     </div>
-
-    <div class="footer"></div>
-
 </body>
-<script src="./header_animation.js"></script>
-<script src="./base_elements_loader.js"></script>
-<script src="./index_updatable_elements_loader.js"></script>
+<script src="./cover.js"></script>
+<script src="./color_distributer.js"></script>
 <script>
-    load_base_elements()
-    load_elements()
+    set_colors(
+        "#header_title.red div",
+        0,30,50,15,0,0
+    )
+    reveal()
 </script>
 </html>

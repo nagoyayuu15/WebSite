@@ -21,6 +21,7 @@
     left: 0px;
     height: 0px;
     overflow: visible;
+    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .header_floating_part ul {
@@ -106,7 +107,7 @@
         display: flex;
         margin-top: 0px;
         display: flex;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
         font-size: 60px;
         margin: 0;
         text-align: center;
@@ -139,11 +140,9 @@
         margin-right: 50px;
         display: flex;    
     }
-    #header_title .pc {
-        width: 0px;/* phantom element */
-    }
-    #header_title .sp {
+    #header_title img {
         width: 120px;
+        height: auto;
     }
     .dropdown_label + .dropdown{
         width: 70px;
@@ -169,17 +168,18 @@
     /* tool bar */
     #tool_bar{
         display: flex;
-        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
         font-size: 20px;
         margin: 0;
         text-align: center;
+        font-weight: 320;
     }
     ul {
         list-style-type: none;
         padding: 0;
     }
     #tool_bar>li {
-        margin-top: 30px;
+        margin-top: 25px;
         width: 90px;
     }
     .header_floating_part li {
@@ -237,11 +237,9 @@
         margin-left: 50px;
         display: flex;
     }
-    #header_title .pc {
+    #header_title img {
         width: 40px;
-    }
-    #header_title .sp {
-        width: 0px;/* phantom element */
+        height: auto;
     }
     .dropdown_label + .dropdown{
         width: 70px;
@@ -267,58 +265,16 @@
     color: rgb(76, 76, 76);
 }
 
-#header_title>img {filter: grayscale(100%);}
 #header_title {color:hsl(0, 0%, 30%);}
 
 
-#header_title img.red {filter: grayscale(40%) hue-rotate(-30deg) ;}
-#header_title.red .l1{color:hsl(17, 45%, 50%);}
-#header_title.red .l2{color:hsl(0, 22%, 50%);}
-#header_title.red .l3{color:hsl(34, 45%, 50%);}
-#header_title.red .l4{color:hsl(0, 42%, 50%);}
-#header_title.red .l5{color:hsl(34, 45%, 50%);}
-#header_title.red .l6{color:hsl(34, 25%, 50%);}
-#header_title.red .l7{color:hsl(17, 25%, 50%);}
-#header_title.red .l8{color:hsl(0, 42%, 50%);}
-#header_title.red .l9{color:hsl(17, 45%, 50%);}
+#header_title.red img {filter: grayscale(40%) hue-rotate(-30deg) ;}
 
-.header_floating_part ul.title li:nth-child(1):hover .side_bar{
-    background-color: hsl(0, 46%, 55%);
-}
-.header_floating_part ul.title li:nth-child(2):hover .side_bar{
-    background-color: hsl(24, 43%, 58%);
-}
-
-
-.dropdown_label.identity.yellow{color: hsl(56, 42%, 50%)}
-#header_title>img.yellow {filter: grayscale(10%) hue-rotate(25deg) ;}
-.header_floating_part ul.identity li:nth-child(1):hover .side_bar{
-    background-color: hsl(70, 42%, 50%);
-}
-.header_floating_part ul.identity li:nth-child(2):hover .side_bar{
-    background-color: hsl(56, 42%, 50%);
-}
-.header_floating_part ul.identity li:nth-child(3):hover .side_bar{
-    background-color: hsl(93, 42%, 50%);
-}
-.header_floating_part ul.identity li:nth-child(4):hover .side_bar{
-    background-color: hsl(49, 46%, 57%);
-}
+.dropdown_label.identity.yellow{color: hsl(55, 43%, 50%)}
+#header_title.yellow img {filter: grayscale(10%) hue-rotate(25deg) ;}
 
 .dropdown_label.skills.bluegreen{color: hsl(180, 43%, 50%)}
-#header_title>img.bluegreen {filter: grayscale(10%) hue-rotate(160deg) ;}
-.header_floating_part ul.skills li:nth-child(1):hover .side_bar{
-    background-color: hsl(175, 43%, 50%);
-}
-.header_floating_part ul.skills li:nth-child(2):hover .side_bar{
-    background-color: hsl(200, 43%, 50%);
-}
+#header_title.bluegreen img {filter: grayscale(10%) hue-rotate(160deg) ;}
 
 .dropdown_label.weblog.purple{color: hsl(270, 43%, 50%)}
-#header_title>img.purple {filter: grayscale(10%) hue-rotate(250deg);}
-.header_floating_part ul.weblog li:nth-child(1):hover .side_bar{
-    background-color: hsl(250, 33%, 58%);
-}
-.header_floating_part ul.weblog li:nth-child(2):hover .side_bar{
-    background-color: hsl(311, 38%, 58%);
-}
+#header_title.purple img {filter: grayscale(10%) hue-rotate(250deg);}
