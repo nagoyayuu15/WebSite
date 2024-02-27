@@ -12,20 +12,39 @@
     <meta charset="utf-8">
 </head>
 <body>
-
+    <div class="phantom_anchor" id="products"></div>
     <div class="header_floating_part"></div>
     <div class="header"></div>
-
+    
     <div class="content">
-        <div class="feed product-selector">
-            <a href="#anchor">test</a>
+        <div class="feed products hash">
+            <h1># Products</h1>
+            <div class="buttons">
+                <div class="button">NN</div>
+                <div class="button">Translator</div>
+            </div>
         </div>
-        <div class="feed products">
-            <p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p>test</p><p id="#anchor">test</p>
+        <div class="feed products instance">
+            <div class="field">
+                <div class="section">CREATE NEW PAGE</div>
+                <div class="section">CREATE NEW PAGE</div>
+                <div class="section dummy"></div>
+            </div>
         </div>
-        <div class="feed ability-selector">
+        <div class="feed abilities hash">
+            <div class="phantom_anchor" id="ability"></div>
+            <h1># Ability</h1>
+            <div class="buttons">
+                <div class="button" jumpto="python">Python</div>
+                <div class="button">Rust</div>
+                <div class="button">TypeScript</div>
+                <div class="button">TypeScript</div>
+            </div>
         </div>
-        <div class="feed abilities">
+        <div class="feed abilities instance">
+            <div class="field">
+                <div class="section dummy"></div>
+            </div>
         </div>
     </div>
 
@@ -34,6 +53,9 @@
 </body>
 <script src="./header_animation.js"></script>
 <script src="./base_elements_loader.js"></script>
-<script src="./scroll_to_anchored_position.js"></script>
-<script>load_base_elements()</script>
+<script src="./scroller.js"></script>
+<script>
+    load_base_elements()
+    apply_scroller()
+</script>
 </html>
