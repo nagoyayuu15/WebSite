@@ -1,4 +1,4 @@
-#header_title>img {filter: grayscale(10%) hue-rotate(25deg) ;}    
+#header_title>img.pc {filter: grayscale(10%) hue-rotate(25deg) ;}    
 
 .content>.feed_carrier>ul>li.important .event{
     font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -216,6 +216,10 @@
 
     .content .feed_carrier .important .event{
         font-size: 70px;
+        font-weight: 450;
+    }
+    .content .feed_carrier .trivial .supplement{
+        font-size: 20px;
         font-weight: 450;
     }
 

@@ -1,8 +1,12 @@
 
-#header_title>img {filter: grayscale(10%) hue-rotate(160deg) ;}
+#header_title>img.pc {filter: grayscale(10%) hue-rotate(160deg) ;}
 
 /* to be responsible */
 @media screen and (max-width: 1000px) {
 }
 @media screen and (min-width: 1000px) {
+    .products {
+        height: 200px;
+        overflow-y: scroll;
+    }
 } 

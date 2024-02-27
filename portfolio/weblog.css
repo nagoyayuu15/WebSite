@@ -1,2 +1,2 @@
 
-#header_title>img {filter: grayscale(10%) hue-rotate(250deg);}
+#header_title>img.pc {filter: grayscale(10%) hue-rotate(250deg);}
