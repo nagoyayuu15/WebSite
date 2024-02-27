@@ -288,6 +288,9 @@
         position: relative;
         left:0%;
     }
+    .content>.feed_hobby h1{
+        margin-bottom: 0px;
+    }
     .content>.feed_hobby ul{
         padding-left: 25px;
     }
