@@ -1,4 +1,4 @@
-let identity = document.querySelector("div.anotation-content")
+function load_elements() {let identity = document.querySelector("div.anotation-content")
 fetch("./updatable/identity.html").then(data=>data.text()).then(html=>{
     identity.innerHTML = html
 })
@@ -62,4 +62,4 @@ Promise.all([circle_svg,history_recodes]).then((res)=>{
             history.appendChild(li)
         }
     )
-})
+})}
