@@ -27,10 +27,6 @@
     color: rgb(179, 179, 179);
 }
 
-.content>.feed_hobby>ul {
-    height: 280px;
-    overflow-y: scroll;
-}
 .content>.feed_hobby>ul>li:nth-child(1) {
     color: hsl(46, 39%, 39%);
 }
@@ -229,5 +225,9 @@
     }
     .content>.feed_comment .main {
         margin: 50px;
+    }
+    .content>.feed_hobby>ul {
+        height: 280px;
+        overflow-y: scroll;
     }
 } 
