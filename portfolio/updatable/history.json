@@ -313,6 +313,16 @@
     {
         "type":"trivial",
         "when":null,
+        "event":"PCIやディープラーニングを数学的な観点から学ぶ",
+        "supplement":["SML-Mathematics for machine larning という英語で行われた授業だった。その最終授業の課題として、花札をプレイするAIを作った。8割のコーディングを担当。"],
+        "link":{
+            "href":null,
+            "text":"プロダクトページへ"
+        }
+    },
+    {
+        "type":"trivial",
+        "when":null,
         "event":"Rustを独学する。",
         "supplement":["ニューラルネットワーク作ろうとしたが断念。再チャレンジ予定"],
         "link":{
@@ -324,7 +334,7 @@
         "type":"trivial",
         "when":null,
         "event":"統計学を復習する。",
-        "supplement":["ニューラルネットワーク作ろうとしたが断念。再チャレンジ予定"],
+        "supplement":[],
         "link":{
             "href":"大学4年間の統計学が10時間でざっと学べる",
             "text":"本棚へ"
@@ -343,7 +353,7 @@
     {
         "type":"trivial",
         "when":"2024/05",
-        "event":"塾講師をやめ学習に専念する（予定）",
+        "event":"塾講師をやめ学習に専念する<br class=\"sp\">（予定）",
         "supplement":[null],
         "link":{
             "href":null,

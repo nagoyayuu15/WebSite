@@ -4,6 +4,12 @@
     z-index: 3000;
     font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
+
+.content h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+}
+
 .feed{
     background-color: rgb(240, 240, 240);
     z-index: 3001;
@@ -17,9 +23,10 @@
         margin-bottom: 875px;
     }
     .feed{
-        width: 95%;
-        left: 2.5%;
-        margin: 5px;
+        margin: 10px;
+        margin-bottom: 50px;
+        margin-left: 10px;
+        margin-right: 10px;
         border-radius: 10px;
     }
 }

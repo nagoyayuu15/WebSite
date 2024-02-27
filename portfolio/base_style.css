@@ -30,7 +30,10 @@ a {
 
 /* to be responsible */
 @media screen and (max-width: 1000px) {
-    .pc {font-size: 0px;}
+    .pc {
+        font-size: 0px;
+        display: none;
+    }
     .sp {font-size: 40px;}
     body {font-size: 40px;}
     .phantom_anchor {
@@ -40,7 +43,10 @@ a {
 }
 @media screen and (min-width: 1000px) {
     .pc {font-size: 40px;}
-    .sp {font-size: 0px;}
+    .sp {
+        font-size: 0px;
+        display: none;
+    }
     body {font-size: 20px;}
     .phantom_anchor {
         position: relative;
