@@ -1,4 +1,4 @@
-header = document.querySelector("div.header")
+function load_base_elements() {header = document.querySelector("div.header")
 header_loaded = fetch("./header.html")
     .then(data=>data.text())
     .then(html=>{header.innerHTML = html})
@@ -27,3 +27,4 @@ footer_elements_completed = fetch("./footer.html")
             .then(data=>data.text())
             .then(html=>{contact.innerHTML = html})
     })
+}
