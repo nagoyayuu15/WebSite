@@ -23,7 +23,7 @@
 .content .anotation {    
     color: rgb(56, 56, 56);
 }
-.content span.en, span.note, .content>.feed_carrier>ul>li .when{
+.content span.en, .content span.note, .content>.feed_carrier>ul>li .when{
     color: rgb(179, 179, 179);
 }
 
@@ -105,7 +105,7 @@
     .content {
         display: grid;
         grid-template-columns: 0.5fr 3.6fr 1fr 0.5fr;
-        grid-template-rows: 460px 1fr 460px;
+        grid-template-rows: 460px 1fr fit-content;
     }
     .content .feed_identity .name.ja {
         font-size: 50px;
@@ -133,8 +133,9 @@
         grid-column: 2/3;
         grid-row: 1;
         display: flex;
+        align-items: center;
     }
-    .content span.en, span.note {
+    .content span.en,.content span.note {
         font-size: 15px;
     }
 
@@ -145,10 +146,16 @@
     .content>.feed_hobby {
         grid-column: 3/4;
         grid-row: 1;
+        position: relative;
+        left:0%;
     }
-    
-    .content>.feed_hobby ul {
-        margin-left: 25px;
+    .content>.feed_hobby ul{
+        padding-left: 25px;
+    }
+    .content>.feed_hobby>ul {
+        height: 70%;
+        position: absolute;
+        overflow-y: scroll;
     }
     .content>.feed_hobby>ul>li {
         font-size: 25px;
@@ -169,12 +176,16 @@
         border-radius: 10px;
     }
 
+
+    .content>.feed_carrier p{
+        margin: 0px;
+    }
+
     .content>.feed_carrier>ul{
-       margin-left: 30px;
+        margin-left: 5%;
     }
     
     .content>.feed_carrier>ul>li{
-        margin-bottom: 20px;
         height: fit-content;
     }
     
@@ -198,6 +209,12 @@
         width: 50px;
         height: 50px;
     }
+    .content>.feed_carrier>ul>li.trivial .event{
+        font-size: 15px;
+    }
+    .content>.feed_carrier>ul>li.trivial .supplement,.content>.feed_carrier>ul>li.trivial  a{
+        font-size: 10px;
+    }
     .content>.feed_carrier>ul>li.trivial img{
         width: 50px;
         height: 50px;
@@ -212,11 +229,10 @@
     }
 
     .content>.feed_carrier>ul>li.important .event{
-        font-size: 40px;
+        font-size: 30px;
     }
-
-    .content>.feed_carrier>ul>li .supplement, a{
-        font-size: 15px;
+    .content>.feed_carrier>ul>li.important .supplement,.content>.feed_carrier>ul>li.important a{
+        font-size: 17px;
     }
     .content>.feed_carrier>ul::before{
         width: 12px;
@@ -225,9 +241,6 @@
     }
     .content>.feed_comment .main {
         margin: 50px;
-    }
-    .content>.feed_hobby>ul {
-        height: 280px;
-        overflow-y: scroll;
+        height: fit-content;
     }
 } 
