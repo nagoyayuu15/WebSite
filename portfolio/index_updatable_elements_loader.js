@@ -1,22 +1,23 @@
-function load_elements() {let identity = document.querySelector("div.anotation-content")
-fetch("./updatable/identity.html").then(data=>data.text()).then(html=>{
+async function load_elements() {
+let identity = document.querySelector("div.anotation-content")
+identity_done = fetch("./updatable/identity.html").then(data=>data.text()).then(html=>{
     identity.innerHTML = html
 })
 
 let hobby = document.querySelector(".feed_hobby .main")
-fetch("./updatable/hobby.html").then(data=>data.text()).then(html=>{
+hobby_done = fetch("./updatable/hobby.html").then(data=>data.text()).then(html=>{
     hobby.innerHTML = html
 })
 
 let comment = document.querySelector(".feed_comment .main")
-fetch("./updatable/comment.html").then(data=>data.text()).then(html=>{
+comment_done = fetch("./updatable/comment.html").then(data=>data.text()).then(html=>{
     comment.innerHTML = html
 })
 
 let history = document.querySelector(".feed_carrier>ul")
 let circle_svg=fetch("./circle.svg").then(data=>data.text())
 let history_recodes = fetch("./updatable/history.json").then(data=>data.text()).then(json=>JSON.parse(json))
-Promise.all([circle_svg,history_recodes]).then((res)=>{
+history_done = Promise.all([circle_svg,history_recodes]).then((res)=>{
     circle = res[0]
     obj = res[1]
     obj.map(
@@ -62,4 +63,7 @@ Promise.all([circle_svg,history_recodes]).then((res)=>{
             history.appendChild(li)
         }
     )
-})}
+})
+
+await Promise.all([identity_done,hobby_done,comment_done,history_done])
+}

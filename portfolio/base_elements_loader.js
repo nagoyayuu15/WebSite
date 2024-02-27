@@ -1,4 +1,4 @@
-function load_base_elements() {header = document.querySelector("div.header")
+async function load_base_elements() {header = document.querySelector("div.header")
 header_loaded = fetch("./header.html")
     .then(data=>data.text())
     .then(html=>{header.innerHTML = html})
@@ -27,4 +27,6 @@ footer_elements_completed = fetch("./footer.html")
             .then(data=>data.text())
             .then(html=>{contact.innerHTML = html})
     })
+
+await Promise.all([header_elements_completed,footer_elements_completed])
 }
