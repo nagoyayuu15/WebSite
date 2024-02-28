@@ -13,7 +13,6 @@
 
 .feed{
     background-color: rgb(240, 240, 240);
-    position: relative;
     z-index: 3001;
     overflow-wrap: break-word;
 }
@@ -38,8 +37,8 @@
         margin-bottom: 320px;
     }
     .feed{
-        width: 80%;
-        left: 10%;
+        width: auto;
+        height: auto;
         margin: 5px;
         border-radius: 5px;
     }
