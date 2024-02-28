@@ -108,6 +108,7 @@
     }
     .content .feed_identity img{
         padding: 50px;
+        width: 50%;
     }
 
     .content .feed_carrier>ul{
@@ -211,6 +212,8 @@
         height: 500px;
         overflow-y: scroll;
         text-align: center;
+        position: relative;
+        z-index: 5000;
     }
 
     .content .feed_comment .main {

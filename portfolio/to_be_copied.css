@@ -1,0 +1,61 @@
+.page{
+    padding: 15mm;
+}
+
+@media screen {
+    body{
+        background-color: rgb(226, 226, 226);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .page {
+        width: 210mm;
+        height: 297mm;
+        background-color: rgb(240, 240, 240);
+        border-radius: 3mm;
+    }
+    @media (min-width:1000px){
+        .back_to_top>div{
+            background-color: hsl(0, 58%, 75%);
+            color: rgb(226, 226, 226);
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 30mm;
+            bottom: 8mm;
+            right: 8mm;
+            height: 30mm;
+            width: 30mm;
+            display: flex;
+            border-radius: 10mm;
+        }
+    }
+    @media (max-width:1000px){
+        .back_to_top>div{
+            background-color: hsl(0, 58%, 75%);
+            color: rgb(226, 226, 226);
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+            font-size: 50mm;
+            bottom: 10mm;
+            right: 10mm;
+            height: 50mm;
+            width: 50mm;
+            display: flex;
+            border-radius: 13mm;
+        }
+    }
+}
+
+@media print {
+    .back_to_top{
+        display: none;
+    }
+    .page {
+        page-break-after: always;
+    }
+}

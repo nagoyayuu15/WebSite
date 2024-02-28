@@ -113,7 +113,8 @@
         text-align: center;
     }
     #tool_bar>li {
-        width: 35%
+        width: 35%;
+        margin-top:-10px;
     }
     .header_floating_part li {
         margin: 3px;
