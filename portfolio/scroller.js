@@ -16,7 +16,6 @@ function scroll_to(query) {
             parent.tagName != 'BODY' && !is_scrollable(parent)
         ){
             parent = parent.parentElement
-            console.log(query,parent)
         }
         if (parent.tagName == 'BODY'){
             parent=window
