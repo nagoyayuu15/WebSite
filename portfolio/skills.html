@@ -67,6 +67,6 @@
 <script src="./skills_updatable_elements_loader.js"></script>
 <script src="./cover.js"></script>
 <script>
-    Promise.all([load_base_elements(),load_elements()]).then(scroll_to_url_hash).then(reveal)
+    Promise.all([load_base_elements(),load_elements()]).then(()=>scroll_to_url_hash(null)).then(reveal)
 </script>
 </html>

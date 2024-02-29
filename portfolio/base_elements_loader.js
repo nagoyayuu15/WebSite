@@ -24,7 +24,7 @@ footer_elements_completed = fetch("./footer.html")
     .then(html=>{footer.innerHTML = html})
     .then(()=>{
         contact = document.querySelector(".footer div.contact")
-        fetch("./updatable/contact.html")
+        return fetch("./updatable/contact.html")
             .then(data=>data.text())
             .then(html=>{contact.innerHTML = html})
     })

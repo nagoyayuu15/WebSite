@@ -55,5 +55,5 @@
 <script src="./color_distributer.js"></script>
 <script src="./scroller.js"></script>
 <script src="./cover.js"></script>
-<script>Promise.all([load_base_elements()]).then(scroll_to_url_hash).then(reveal)</script>
+<script>Promise.all([load_base_elements()]).then(()=>scroll_to_url_hash(null)).then(reveal)</script>
 </html>
