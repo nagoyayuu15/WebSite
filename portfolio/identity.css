@@ -226,7 +226,7 @@
     .content {
         display: grid;
         grid-template-columns: 0.5fr 3.6fr 1fr 0.5fr;
-        grid-template-rows: 460px 1fr fit-content;
+        grid-template-rows: 460px 1fr 1fr;
     }
     .content .feed_identity .name.ja {
         font-size: 50px;

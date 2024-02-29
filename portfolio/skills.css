@@ -9,19 +9,35 @@
 }
 
 .button {
+    position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     cursor: pointer;
     transition: all 0.3s 0s ease;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    overflow: hidden;
+}
+
+.button {
     background-color: hsl(0, 0%, 90%);
+    overflow: hidden;
+}
+
+.button:hover {
+    background-color: hsl(0, 0%, 80%);
 }
 
 .button img {
     width: 70%;
     height: auto;
-    margin-left: auto;
-    margin-right: auto;
+    transition: all 0.3s 0s ease;
 }
+
+.button:hover img {
+    filter: grayscale(0%);
+}
+
 
 .feed {
     scroll-behavior: smooth;
@@ -40,7 +56,6 @@
     color: hsl(0, 0%, 30%);
 }
 
-
 .section h1::after {
     content:"";
     position: absolute;
@@ -51,9 +66,86 @@
     width: 100%;
 }
 
+.section a{
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    width: fit-content;
+    transition: all 0.3s 0s ease;
+    user-select: none;
+    cursor: pointer;
+}
+
+.section a:hover{
+    background-color: hsl(0, 0%, 80%);
+}
+
+a.github{
+    background-color: rgb(40, 40, 40);
+}
+
+a.github:hover{
+    background-color: rgb(50, 50, 50);
+}
 
 /* to be responsible */
 @media screen and (max-width: 1000px) {/* for smartphone */
+    .buttons{
+        display: flex;
+        width: fit-content;
+        overflow-x: scroll;
+    }
+    
+    .hash{
+        height: fit-content;
+        padding-bottom: 20px;
+        text-align: center;
+    }
+    .hash h1{
+        margin: 15px;
+    }
+
+    .button {
+        height: 150px;
+        width: 150px;
+        margin-left: 10px;
+        font-size: 500px;
+        font-weight: 600;
+        border-radius: 20px;
+    }
+
+    .button img{
+        height: 80%;
+        width: 80%;
+    }
+
+    .section.dummy {
+        height: 1000px;
+    }
+    .section a{
+        padding: 5px;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 5px;
+    }
+
+    .section a img{
+        height: 40px;
+    }
+
+    .field{
+        width: 90%;
+        margin-top: 50px;
+        margin-bottom: 50px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 1500px;
+        overflow: scroll;
+    }
+
+    .section{
+        width: 100%;
+        text-wrap: wrap;
+    }
 }
 @media screen and (min-width: 1000px) {/* for pc */
     .content {
@@ -116,6 +208,8 @@
         margin-top: 15px;
         margin-left: 15px;
         border-radius: 10px;
+        font-size: 50px;
+        font-weight: 700;
     }
 
     .field {
@@ -128,11 +222,22 @@
     }
 
     .section {
-        padding-top: 50px;
-        padding-left: 50px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
 
     .section.dummy {
         height: 1000px;
+    }
+
+    .section a{
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+    }
+
+    .section a img{
+        height: 20px;
     }
 } 

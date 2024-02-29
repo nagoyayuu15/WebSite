@@ -16,8 +16,6 @@ header_elements_completed = Promise.all([header_loaded,header_floating_part_load
         addEventListenerForToolBar('skills', 'bluegreen')
         addEventListenerForToolBar('weblog', 'purple')
     }
-).then(
-
 )
 
 footer = document.querySelector("div.footer")

@@ -41,7 +41,7 @@
 /* to be responsible */
 @media screen and (max-width: 1000px) {/* for smartphone */
     .footer{
-        height: 850px;
+        height: 1000px;
     }
     .site_map>ul>li{
         width: 30%;

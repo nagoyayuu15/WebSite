@@ -306,7 +306,7 @@
         "event":"DiscordBotを作成する。",
         "supplement":["日本の英語を扱えない友人とフィンランドの友人が円滑にコミュニケーションをできるようにTypeScriptを用いて翻訳Botを作成した。"],
         "link":{
-            "href":null,
+            "href":"./skills.html#products#translatorBot",
             "text":"プロダクトページへ"
         }
     },

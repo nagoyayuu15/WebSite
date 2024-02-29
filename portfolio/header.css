@@ -118,13 +118,14 @@
     }
     .header_floating_part li {
         margin: 3px;
-        height: 72px;
+        height: 102px;
     }
     .header_floating_part li .side_bar {
         width: 3%;
     }
     .header_floating_part li a {
         width: 97%;
+        font-size: 90px;
     }
     .dropdown.dummy{
         height: 0; /* phantom element */

@@ -1,32 +1,63 @@
 
-function scroll_to(query) {
-    let target = document.querySelector(query)
-    if (!target) {return;}
-    let parent = target.parentElement
-    clientRectOfparent = parent.getBoundingClientRect()
-    clientRectOftarget = target.getBoundingClientRect()
-    parent.scrollBy(clientRectOftarget.left-clientRectOfparent.left,clientRectOftarget.top-clientRectOfparent.top)
+function is_scrollable(element){
+    style=window.getComputedStyle(element)
+    return (
+        style.getPropertyValue('overflow').split(' ').includes('scroll')||
+        style.getPropertyValue('overflowX')=='scroll'||
+        style.getPropertyValue('overflowY')=='scroll'
+    )
 }
 
-function scroll_to_url_hash() {
-    if(!window.location.hash){return;}
-    let target = document.querySelector(window.location.hash)
-    if (!target){return;}
-    clientRectOftarget = target.getBoundingClientRect()
-    window.scrollTo(clientRectOftarget.left,clientRectOftarget.top)
+function scroll_to(query) {
+    try{
+        let target = document.querySelector(query)
+        parent = target.parentElement
+        while(
+            parent.tagName != 'BODY' && !is_scrollable(parent)
+        ){
+            parent = parent.parentElement
+            console.log(query,parent)
+        }
+        if (parent.tagName == 'BODY'){
+            parent=window
+            clientRectOfparent = {
+                left:0,
+                top:0
+            }
+        }
+        else{
+            clientRectOfparent = parent.getBoundingClientRect()
+        }
+        clientRectOftarget = target.getBoundingClientRect()
+        parent.scrollBy(clientRectOftarget.left-clientRectOfparent.left,clientRectOftarget.top-clientRectOfparent.top)
+    }
+    catch(error){
+        if (error instanceof TypeError){console.log(error)}
+        else{throw error}
+    }
+}
+
+function scroll_to_url_hash(hash=null) {
+    try{
+        hash = hash ? hash : window.location.hash
+        hash.slice(1).split('#').map(
+            anchor=>{
+                if (anchor=='') {return}
+                scroll_to('#'+anchor)
+            }
+        )
+    }
+    catch(error){
+        if (error instanceof TypeError){}
+        else{throw error}
+    }
 }
 
 function apply_scroller() {
     Array.from(document.querySelectorAll(".button")).map(
         button => {
-            let target = document.getElementById(button.getAttribute("jumpto"))
-            if (!target) {return;}
-            let parent = target.parentElement
-
             button.addEventListener("click",()=>{
-                clientRectOfparent = parent.getBoundingClientRect()
-                clientRectOftarget = target.getBoundingClientRect()
-                parent.scrollBy(clientRectOfparent.left,clientRectOftarget.top-clientRectOfparent.top)
+                scroll_to("#"+button.getAttribute("jumpto"))
             })
         }
     )
