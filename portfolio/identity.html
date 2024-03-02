@@ -71,7 +71,7 @@
 <script src="./color_distributer.js"></script>
 <script src="./scroller.js"></script>
 <script src="./cover.js"></script>
-<script>
+<script>window.onload = ()=>{
     Promise.all([load_base_elements(),load_elements()]).then(()=>scroll_to_url_hash(null)).then(reveal)
-</script>
+}</script>
 </html>

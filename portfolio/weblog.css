@@ -1,2 +1,32 @@
 
 #header_title.norm img {filter: grayscale(10%) hue-rotate(250deg);}
+
+.feed_wrapper {
+    height: fit-content;
+}
+
+div.feed.feed_weblog {
+    display: block;
+}
+
+div.feed.bookshelf {
+    display: block;
+}
+
+/* to be responsible */
+@media screen and (max-width: 1000px) {/* for smartphone */
+    .feed_weblog {
+        height: 1000px;
+    }
+    .bookshelf {
+        height: 1000px;
+    }
+}
+@media screen and (min-width: 1000px) {/* for pc */
+    div.feed.feed_weblog {
+        height: 1000px;
+    }
+    div.feed.bookshelf {
+        height: 1000px;
+    }
+} 

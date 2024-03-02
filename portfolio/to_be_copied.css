@@ -32,6 +32,10 @@
             width: 30mm;
             display: flex;
             border-radius: 10mm;
+            transition: all 0.3s 0s ease;
+        }
+        .back_to_top>div:hover{
+            background-color: hsl(0, 58%, 85%);
         }
     }
     @media (max-width:1000px){
@@ -49,6 +53,10 @@
             width: 50mm;
             display: flex;
             border-radius: 13mm;
+            transition: all 0.3s 0s ease;
+        }
+        .back_to_top>div:hover{
+            background-color: hsl(0, 58%, 85%);
         }
     }
 }
