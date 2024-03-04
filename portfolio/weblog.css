@@ -428,6 +428,10 @@ div.feed.feed_weblog_articles p {
     .feed.controler.tags .tag{
         height: fit-content;
     }
+    #bookshelf {
+        grid-column: 2/4;
+        grid-row: 3;
+    }
 } 
 
 @media screen and (min-width: 1300px) {/* for pc */
@@ -577,5 +581,9 @@ div.feed.feed_weblog_articles p {
     }
     .feed.controler.tags .tag{
         height: fit-content;
+    }
+    #bookshelf {
+        grid-column: 2/4;
+        grid-row: 3;
     }
 } 
