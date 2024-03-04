@@ -4,16 +4,16 @@ function random(diviation){
 
 function set_colors(selector, hue, saturation, lightness, hue_max_diviation=20, saturation_max_deviation=5, lightness_max_deviation=5) {
     Array.from(document.querySelectorAll(selector)).map(element=>{
-        hue_fluctuation=random(hue_max_diviation)
-        saturation_fluctuation=random(saturation_max_deviation)
-        lightness_fluctuation=random(lightness_max_deviation)
-        hue_for_element = hue+hue_fluctuation
+        let hue_fluctuation=random(hue_max_diviation)
+        let saturation_fluctuation=random(saturation_max_deviation)
+        let lightness_fluctuation=random(lightness_max_deviation)
+        var hue_for_element = hue+hue_fluctuation
         hue_for_element = hue_for_element > 0 ? hue_for_element : hue_for_element + 360
         hue_for_element = hue_for_element < 360 ? hue_for_element : hue_for_element - 360
-        saturation_for_element = saturation+saturation_fluctuation
+        var saturation_for_element = saturation+saturation_fluctuation
         saturation_for_element = saturation_for_element > 0 ? saturation_for_element : 0
         saturation_for_element = saturation_for_element < 100 ? saturation_for_element : 100
-        lightness_for_element = lightness+lightness_fluctuation
+        var lightness_for_element = lightness+lightness_fluctuation
         lightness_for_element = lightness_for_element > 0 ? lightness_for_element : 0
         lightness_for_element = lightness_for_element < 100 ? lightness_for_element : 100
         element.style.color = "hsl("+(hue_for_element)+","+(saturation_for_element)+"%,"+(lightness_for_element)+"%)"
@@ -22,16 +22,16 @@ function set_colors(selector, hue, saturation, lightness, hue_max_diviation=20, 
 
 function set_stroke_colors(selector, hue, saturation, lightness, hue_max_diviation=0, saturation_max_deviation=0, lightness_max_deviation=0) {
     Array.from(document.querySelectorAll(selector)).map(element=>{
-        hue_fluctuation=random(hue_max_diviation)
-        saturation_fluctuation=random(saturation_max_deviation)
-        lightness_fluctuation=random(lightness_max_deviation)
-        hue_for_element = hue+hue_fluctuation
+        let hue_fluctuation=random(hue_max_diviation)
+        let saturation_fluctuation=random(saturation_max_deviation)
+        let lightness_fluctuation=random(lightness_max_deviation)
+        var hue_for_element = hue+hue_fluctuation
         hue_for_element = hue_for_element > 0 ? hue_for_element : hue_for_element + 360
         hue_for_element = hue_for_element < 360 ? hue_for_element : hue_for_element - 360
-        saturation_for_element = saturation+saturation_fluctuation
+        var saturation_for_element = saturation+saturation_fluctuation
         saturation_for_element = saturation_for_element > 0 ? saturation_for_element : 0
         saturation_for_element = saturation_for_element < 100 ? saturation_for_element : 100
-        lightness_for_element = lightness+lightness_fluctuation
+        var lightness_for_element = lightness+lightness_fluctuation
         lightness_for_element = lightness_for_element > 0 ? lightness_for_element : 0
         lightness_for_element = lightness_for_element < 100 ? lightness_for_element : 100
         element.style.stroke = "hsl("+(hue_for_element)+","+(saturation_for_element)+"%,"+(lightness_for_element)+"%)"
@@ -40,16 +40,16 @@ function set_stroke_colors(selector, hue, saturation, lightness, hue_max_diviati
 
 function set_background_colors(selector, hue, saturation, lightness, hue_max_diviation=20, saturation_max_deviation=5, lightness_max_deviation=5) {
     Array.from(document.querySelectorAll(selector)).map(element=>{
-        hue_fluctuation=random(hue_max_diviation)
-        saturation_fluctuation=random(saturation_max_deviation)
-        lightness_fluctuation=random(lightness_max_deviation)
-        hue_for_element = hue+hue_fluctuation
+        let hue_fluctuation=random(hue_max_diviation)
+        let saturation_fluctuation=random(saturation_max_deviation)
+        let lightness_fluctuation=random(lightness_max_deviation)
+        var hue_for_element = hue+hue_fluctuation
         hue_for_element = hue_for_element > 0 ? hue_for_element : hue_for_element + 360
         hue_for_element = hue_for_element < 360 ? hue_for_element : hue_for_element - 360
-        saturation_for_element = saturation+saturation_fluctuation
+        var saturation_for_element = saturation+saturation_fluctuation
         saturation_for_element = saturation_for_element > 0 ? saturation_for_element : 0
         saturation_for_element = saturation_for_element < 100 ? saturation_for_element : 100
-        lightness_for_element = lightness+lightness_fluctuation
+        var lightness_for_element = lightness+lightness_fluctuation
         lightness_for_element = lightness_for_element > 0 ? lightness_for_element : 0
         lightness_for_element = lightness_for_element < 100 ? lightness_for_element : 100
         element.style.backgroundColor = "hsl("+(hue_for_element)+","+(saturation_for_element)+"%,"+(lightness_for_element)+"%)"
@@ -62,16 +62,16 @@ function set_colors_with_another_selector(querySelector, selectorOfStyle, hue, s
     var style = document.createElement('style');
     var css = ""
     Array.from(document.querySelectorAll(querySelector)).map(element=>{
-        hue_fluctuation=random(hue_max_diviation)
-        saturation_fluctuation=random(saturation_max_deviation)
-        lightness_fluctuation=random(lightness_max_deviation)
-        hue_for_element = hue+hue_fluctuation
+        let hue_fluctuation=random(hue_max_diviation)
+        let saturation_fluctuation=random(saturation_max_deviation)
+        let lightness_fluctuation=random(lightness_max_deviation)
+        var hue_for_element = hue+hue_fluctuation
         hue_for_element = hue_for_element > 0 ? hue_for_element : hue_for_element + 360
         hue_for_element = hue_for_element < 360 ? hue_for_element : hue_for_element - 360
-        saturation_for_element = saturation+saturation_fluctuation
+        var saturation_for_element = saturation+saturation_fluctuation
         saturation_for_element = saturation_for_element > 0 ? saturation_for_element : 0
         saturation_for_element = saturation_for_element < 100 ? saturation_for_element : 100
-        lightness_for_element = lightness+lightness_fluctuation
+        var lightness_for_element = lightness+lightness_fluctuation
         lightness_for_element = lightness_for_element > 0 ? lightness_for_element : 0
         lightness_for_element = lightness_for_element < 100 ? lightness_for_element : 100
         element.classList.add("change_color_id"+change_color_id)
@@ -92,16 +92,16 @@ function set_stroke_colors_with_another_selector(querySelector, selectorOfStyle,
     var style = document.createElement('style');
     var css = ""
     Array.from(document.querySelectorAll(querySelector)).map(element=>{
-        hue_fluctuation=random(hue_max_diviation)
-        saturation_fluctuation=random(saturation_max_deviation)
-        lightness_fluctuation=random(lightness_max_deviation)
-        hue_for_element = hue+hue_fluctuation
+        let hue_fluctuation=random(hue_max_diviation)
+        let saturation_fluctuation=random(saturation_max_deviation)
+        let lightness_fluctuation=random(lightness_max_deviation)
+        var hue_for_element = hue+hue_fluctuation
         hue_for_element = hue_for_element > 0 ? hue_for_element : hue_for_element + 360
         hue_for_element = hue_for_element < 360 ? hue_for_element : hue_for_element - 360
-        saturation_for_element = saturation+saturation_fluctuation
+        var saturation_for_element = saturation+saturation_fluctuation
         saturation_for_element = saturation_for_element > 0 ? saturation_for_element : 0
         saturation_for_element = saturation_for_element < 100 ? saturation_for_element : 100
-        lightness_for_element = lightness+lightness_fluctuation
+        var lightness_for_element = lightness+lightness_fluctuation
         lightness_for_element = lightness_for_element > 0 ? lightness_for_element : 0
         lightness_for_element = lightness_for_element < 100 ? lightness_for_element : 100
         element.classList.add("change_color_id"+change_color_id)
@@ -122,16 +122,16 @@ function set_background_colors_with_another_selector(querySelector, selectorOfSt
     var style = document.createElement('style');
     var css = ""
     Array.from(document.querySelectorAll(querySelector)).map(element=>{
-        hue_fluctuation=random(hue_max_diviation)
-        saturation_fluctuation=random(saturation_max_deviation)
-        lightness_fluctuation=random(lightness_max_deviation)
-        hue_for_element = hue+hue_fluctuation
+        let hue_fluctuation=random(hue_max_diviation)
+        let saturation_fluctuation=random(saturation_max_deviation)
+        let lightness_fluctuation=random(lightness_max_deviation)
+        var hue_for_element = hue+hue_fluctuation
         hue_for_element = hue_for_element > 0 ? hue_for_element : hue_for_element + 360
         hue_for_element = hue_for_element < 360 ? hue_for_element : hue_for_element - 360
-        saturation_for_element = saturation+saturation_fluctuation
+        var saturation_for_element = saturation+saturation_fluctuation
         saturation_for_element = saturation_for_element > 0 ? saturation_for_element : 0
         saturation_for_element = saturation_for_element < 100 ? saturation_for_element : 100
-        lightness_for_element = lightness+lightness_fluctuation
+        var lightness_for_element = lightness+lightness_fluctuation
         lightness_for_element = lightness_for_element > 0 ? lightness_for_element : 0
         lightness_for_element = lightness_for_element < 100 ? lightness_for_element : 100
         element.classList.add("change_color_id"+change_color_id)

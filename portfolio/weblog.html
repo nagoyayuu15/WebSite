@@ -3,21 +3,21 @@
 <head>
     <title>Portfolio-Blog | HB</title>
     <meta nama="description" content="blog page of my portfolio site.">
-    <link rel="icon" href="/icon.svg?cache_is_deprecated_at=20240302213936140991&" type="image/svg+xml">
-    <link rel="stylesheet" href="./footer.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./base_style.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./cover.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./header.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./content.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./weblog.css?cache_is_deprecated_at=20240302213936140991&">
+    <link rel="icon" href="/icon.svg?cache_is_deprecated_at=20240305082207603997&" type="image/svg+xml">
+    <link rel="stylesheet" href="./footer.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./base_style.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./cover.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./header.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./content.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./weblog.css?cache_is_deprecated_at=20240305082207603997&">
     <meta charset="utf-8">
-    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Expires" content="600">
 </head>
 <body>
 
     <div class="cover">
         <div class="cover_image purple">
-            <img src="/icon.svg?cache_is_deprecated_at=20240302213936140991&" alt="">
+            <img src="/icon.svg?cache_is_deprecated_at=20240305082207603997&" alt="">
             <div>P</div>
             <div>o</div>
             <div>r</div>
@@ -33,27 +33,74 @@
     <div class="header"></div>
 
     <div class="content">
-        <div class="feed_wrapper">
-            <div class="feed feed_weblog">
-                aaa
+        <div class="feed controler tags">
+            <div class="phantom_anchor" id="weblog"></div>
+            <ul>
+                <li class="tag all">
+                    ALL
+                </li>
+            </ul>
+            <div class="navigation">Click to toggle</div>
+        </div>
+        <div class="feed controler time">
+            <div class="span">
+                <ul>
+                </ul>
+                <div class="navigation">Drag to select</div>
+            </div>
+            <div class="scale">
+                <div class="button m1">1m</div>
+                <div class="button m6">6m</div>
+                <div class="button m12">1y</div>
+                <div class="button all selected">All</div>
             </div>
         </div>
-        <div class="feed_wrapper">
-            <div class="feed feed_bookshelf">
-                aaa
-            </div>
+        <div class="float_weblog_titles pc">
+            <ul>
+            </ul>
+        </div>
+        <div class="feed feed_weblog_articles">
+            <ul class="articles">
+            </ul>
+        </div>
+        <div class="feed feed_bookshelf">
+            <div class="phantom_anchor" id="bookshelf"></div>
         </div>
     </div>
 
     <div class="footer"></div>
 
 </body>
-<script src="./header_animation.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./base_elements_loader.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./color_distributer.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./scroller.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./cover.js?cache_is_deprecated_at=20240302213936140991&"></script>
+<script src="./define_loaded_time.js"></script>
+<script src="./header_animation.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./base_elements_loader.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./color_distributer.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./scroller.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./cover.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./buttons.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./weblog_index_interpreter.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./weblog_article_update.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./weblog_span_update.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./weblog_updatable_elements_loader.js?cache_is_deprecated_at=20240305082207603997&"></script>
 <script>window.onload = ()=>{
-    Promise.all([load_base_elements()]).then(()=>scroll_to_url_hash(null)).then(reveal)
+    Promise.all([load_base_elements(),load_elements()])
+    .then(()=>scroll_to_url_hash(null))
+    .then(()=>{
+        set_background_colors_with_another_selector(".feed.controler.tags .tag",".feed.controler.tags .tag.selected",250, 30, 90, 10, 0, 0)
+        set_colors_with_another_selector(".feed.controler.tags .tag",".feed.controler.tags .tag.selected",280, 60, 50, 10, 0, 0)
+        
+        set_background_colors_with_another_selector(".feed.controler.time .scale .button",".feed.controler.time .scale .button.selected",250, 60, 80, 10, 0, 0)
+        
+        set_background_colors_with_another_selector(".feed.feed_bookshelf a.book",".feed.feed_bookshelf a.book:hover",250, 30, 90, 30, 0, 0)
+        
+        set_background_colors_with_another_selector(".feed.controler.time .span .button",".feed.controler.time .span .button.selected",250, 30, 90, 10, 0, 0)
+        set_colors_with_another_selector(".feed.controler.time .span .button",".feed.controler.time .span .button.selected",280, 60, 50, 10, 0, 0)
+    })
+    .then(()=>{
+        apply_toggle()
+        apply_singleton(".scale .button")
+        apply_all_button(".tag.all",".tag.hash")
+    })
+    .then(reveal)
 }</script>
 </html>

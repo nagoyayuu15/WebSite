@@ -222,10 +222,178 @@
     }
 }
 
-@media screen and (min-width: 1000px) {/* for pc */
+@media screen and (min-width: 1000px) and (max-width: 1220px) {/* for intermediate */
     .content {
         display: grid;
-        grid-template-columns: 0.5fr 3.6fr 1fr 0.5fr;
+        grid-template-columns: 0px auto 300px 0px;
+        grid-template-rows: 460px auto auto;
+    }
+    .content .feed_identity .name.ja {
+        font-size: 50px;
+    }    
+    .content .feed_identity .name.en {
+        font-size: 30px;
+    }
+    .content>.feed_identity .anotation{
+        margin: 30px;
+        width: fit-content;
+    }
+    .content h1{
+        margin: 30px;
+        text-wrap: nowrap;
+        overflow: hidden;
+    }
+    .content>.feed_identity h1{
+        margin: 10px;
+    }
+    .content>.feed_identity img{
+        width: 30%;
+        margin: 25px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .content>.feed_identity {
+        grid-column: 2/3;
+        grid-row: 1;
+        display: flex;
+        align-items: center;
+        text-wrap: nowrap;
+    }
+    .content span.en,.content span.note {
+        font-size: 15px;
+    }
+
+    .content>.feed_carrier {
+        grid-column: 2/4;
+        grid-row: 2/3;
+    }
+    .content>.feed_hobby {
+        grid-column: 3/4;
+        grid-row: 1;
+        position: relative;
+        left:0%;
+    }
+    .content>.feed_hobby h1{
+        margin-bottom: 0px;
+    }
+    .content>.feed_hobby ul{
+        padding-left: 25px;
+    }
+    .content>.feed_hobby>ul {
+        height: 70%;
+        position: absolute;
+        overflow-y: scroll;
+    }
+    .content>.feed_hobby>ul>li {
+        font-size: 25px;
+    }
+    .content>.feed_hobby>ul>li>ul {
+        font-size: 20px;
+    }
+    .content>.feed_hobby a {
+        font-size: 20px;
+    }
+
+    .content>.feed_comment {
+        grid-column: 2/4;
+        grid-row: 3;
+    }
+    .feed{
+        width: auto;
+        border-radius: 10px;
+    }
+
+
+    .content>.feed_carrier{
+        overflow-y: hidden;
+    }
+
+    .content>.feed_carrier p{
+        margin: 0px;
+    }
+
+    .content>.feed_carrier>ul{
+        margin-left: 5%;
+        padding-bottom: 50px;
+    }
+    
+    .content>.feed_carrier>ul>li{
+        height: fit-content;
+        margin-bottom: 10px;
+    }
+    
+    .content>.feed_carrier>ul>li>.img_wrapper{
+        width: 100px;
+        height: fit-content;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .content>.feed_carrier>ul>li.important svg{
+        width: 100px;
+        height: 100px;
+    }
+    .content>.feed_carrier>ul>li.important img{
+        width: 100px;
+        height: 100px;
+    }
+    .content>.feed_carrier>ul>li.trivial svg{
+        width: 50px;
+        height: 50px;
+    }
+    .content>.feed_carrier>ul>li.trivial .event{
+        font-size: 15px;
+    }
+    .content>.feed_carrier>ul>li.trivial .supplement,.content>.feed_carrier>ul>li.trivial  a{
+        font-size: 10px;
+    }
+    .content>.feed_carrier>ul>li.trivial img{
+        width: 50px;
+        height: 50px;
+    }
+    .content>.feed_carrier>ul>li .when{
+        width: 150px;
+        font-size: 15px;
+    }
+    
+    .content>.feed_carrier>ul>li .recode{
+        width: 600px;
+    }
+
+    .content>.feed_carrier>ul>li.important .event{
+        font-size: 30px;
+    }
+    .content>.feed_carrier>ul>li.important .supplement,.content>.feed_carrier>ul>li.important a{
+        font-size: 17px;
+    }
+    .content>.feed_carrier>ul::before{
+        width: 8px;
+        left: 46px;
+        height: 120%;
+        border-radius: 3px;
+    }
+    .content .feed_carrier .important .supplement a{
+        display: block;
+        margin-top: 10px;
+    }
+    .content .feed_carrier .trivial .supplement a{
+        display: block;
+        margin-top: 5px;
+    }
+    .content .feed_carrier .supplement a:empty{
+        margin-top: 0px;
+    }
+    .content>.feed_comment .main {
+        margin: 50px;
+        height: fit-content;
+    }
+} 
+
+@media screen and (min-width: 1220px) {/* for pc */
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 3fr 300px 1fr;
         grid-template-rows: 460px auto auto;
     }
     .content .feed_identity .name.ja {
@@ -255,6 +423,7 @@
         grid-row: 1;
         display: flex;
         align-items: center;
+        text-wrap: nowrap;
     }
     .content span.en,.content span.note {
         font-size: 15px;

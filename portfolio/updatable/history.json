@@ -272,7 +272,7 @@
     },
     {
         "type":"trivial",
-        "when":null,
+        "when":"2023/10",
         "event":"塾講師を始める。",
         "supplement":[],
         "link":{
@@ -294,7 +294,7 @@
         "type":"important",
         "when":null,
         "event":"C言語の授業を受ける。",
-        "supplement":["評定はA+"],
+        "supplement":["評定はA"],
         "link":{
             "href":null,
             "text":null

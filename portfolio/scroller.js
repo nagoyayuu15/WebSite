@@ -11,12 +11,13 @@ function is_scrollable(element){
 function scroll_to(query) {
     try{
         let target = document.querySelector(query)
-        parent = target.parentElement
+        var parent = target.parentElement
         while(
             parent.tagName != 'BODY' && !is_scrollable(parent)
         ){
             parent = parent.parentElement
         }
+        let clientRectOfparent;
         if (parent.tagName == 'BODY'){
             parent=window
             clientRectOfparent = {
@@ -27,11 +28,11 @@ function scroll_to(query) {
         else{
             clientRectOfparent = parent.getBoundingClientRect()
         }
-        clientRectOftarget = target.getBoundingClientRect()
+        let clientRectOftarget = target.getBoundingClientRect()
         parent.scrollBy(clientRectOftarget.left-clientRectOfparent.left,clientRectOftarget.top-clientRectOfparent.top)
     }
     catch(error){
-        if (error instanceof TypeError){console.log(error)}
+        if (error instanceof TypeError){}
         else{throw error}
     }
 }

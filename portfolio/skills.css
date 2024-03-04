@@ -91,7 +91,7 @@ a.github:hover{
 @media screen and (max-width: 1000px) {/* for smartphone */
     .buttons{
         display: flex;
-        width: fit-content;
+        width: 100%;
         overflow-x: scroll;
     }
     
@@ -106,7 +106,9 @@ a.github:hover{
 
     .button {
         height: 150px;
+        min-height: 150px;
         width: 150px;
+        min-width: 150px;
         margin-left: 10px;
         font-size: 500px;
         font-weight: 600;
@@ -147,10 +149,11 @@ a.github:hover{
         text-wrap: wrap;
     }
 }
-@media screen and (min-width: 1000px) {/* for pc */
+
+@media screen and (min-width: 1000px) and (max-width: 1300px) {/* for intermediate */
     .content {
         display: grid;
-        grid-template-columns: 0.3fr 1fr 1fr 1fr 0.3fr;
+        grid-template-columns: 0fr 450px 1fr 450px 0fr;
         grid-template-rows: 700px 700px;    
     }
 
@@ -227,7 +230,102 @@ a.github:hover{
     }
 
     .section.dummy {
-        height: 1000px;
+        height: 500px;
+    }
+
+    .section a{
+        padding: 2px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+    }
+
+    .section a img{
+        height: 20px;
+    }
+} 
+
+@media screen and (min-width: 1300px) {/* for pc */
+    .content {
+        display: grid;
+        grid-template-columns: 0.3fr 450px 1fr 450px 0.3fr;
+        grid-template-rows: 700px 700px;    
+    }
+
+    .content a {
+        display: block;
+    }
+
+    .content .products.hash {
+        grid-column: 2/4;
+        grid-row: 1;
+        width: auto;
+    }
+
+    .content .products.instance {
+        grid-column: 4;
+        grid-row: 1;
+        width: auto;
+    }
+
+    .content .abilities.hash {
+        grid-column: 3/5;
+        grid-row: 2;
+        width: auto;
+    }
+
+    .content .abilities.instance {
+        grid-column: 2;
+        grid-row: 2;
+        width: auto;
+    }
+
+    .hash .buttons{
+        padding: 10px;
+        padding-top: 0px;
+        height: 600px;
+        width: 95%;
+        overflow: hidden;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: flex-start;
+        overflow-y: scroll;
+        margin-top: 10px;
+    }
+
+    .feed>h1{
+        margin: 40px;
+        margin-bottom: 0px;
+        padding: 0px;
+        font-size: 40px;
+    }
+
+    .button {
+        width: 140px;
+        height: 140px;
+        margin-top: 15px;
+        margin-left: 15px;
+        border-radius: 10px;
+        font-size: 50px;
+        font-weight: 700;
+    }
+
+    .field {
+        margin-top:5%;
+        margin-bottom:2%;
+        margin-left:2%;
+        margin-right:2%;
+        width:96%;
+        height: 93%;
+    }
+
+    .section {
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .section.dummy {
+        height: 500px;
     }
 
     .section a{

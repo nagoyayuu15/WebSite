@@ -1,11 +1,11 @@
 async function load_base_elements() {
 header = document.querySelector("div.header")
-header_loaded = fetch("./header.html")
+header_loaded = fetch("./header.html?"+now)
     .then(data=>data.text())
     .then(html=>{header.innerHTML = html})
 
 header_floating_part = document.querySelector("div.header_floating_part")
-header_floating_part_loaded = fetch("./header_floating_part.html")
+header_floating_part_loaded = fetch("./header_floating_part.html?"+now)
     .then(data=>data.text())
     .then(html=>{header_floating_part.innerHTML = html})
 
@@ -19,12 +19,12 @@ header_elements_completed = Promise.all([header_loaded,header_floating_part_load
 )
 
 footer = document.querySelector("div.footer")
-footer_elements_completed = fetch("./footer.html")
+footer_elements_completed = fetch("./footer.html?"+now)
     .then(data=>data.text())
     .then(html=>{footer.innerHTML = html})
     .then(()=>{
         contact = document.querySelector(".footer div.contact")
-        return fetch("./updatable/contact.html")
+        return fetch("./updatable/contact.html?"+now)
             .then(data=>data.text())
             .then(html=>{contact.innerHTML = html})
     })

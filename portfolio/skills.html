@@ -3,21 +3,21 @@
 <head>
     <title>Portfolio-Skills | HB</title>
     <meta nama="description" content="a page of my portfolio site to explain my abilities and experiences.">
-    <link rel="icon" href="/icon.svg?cache_is_deprecated_at=20240302213936140991&" type="image/svg+xml">
-    <link rel="stylesheet" href="./footer.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./base_style.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./cover.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./header.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./content.css?cache_is_deprecated_at=20240302213936140991&">
-    <link rel="stylesheet" href="./skills.css?cache_is_deprecated_at=20240302213936140991&">
+    <link rel="icon" href="/icon.svg?cache_is_deprecated_at=20240305082207603997&" type="image/svg+xml">
+    <link rel="stylesheet" href="./footer.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./base_style.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./cover.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./header.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./content.css?cache_is_deprecated_at=20240305082207603997&">
+    <link rel="stylesheet" href="./skills.css?cache_is_deprecated_at=20240305082207603997&">
     <meta charset="utf-8">
-    <meta http-equiv="Cache-Control" content="no-store">
+    <meta http-equiv="Expires" content="600">
 </head>
 <body>
 
     <div class="cover">
         <div class="cover_image bluegreen">
-            <img src="/icon.svg?cache_is_deprecated_at=20240302213936140991&" alt="">
+            <img src="/icon.svg?cache_is_deprecated_at=20240305082207603997&" alt="">
             <div>P</div>
             <div>o</div>
             <div>r</div>
@@ -59,14 +59,18 @@
     <div class="footer"></div>
 
 </body>
-<script src="./header_animation.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./base_elements_loader.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./scroller.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./fecher.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./color_distributer.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./skills_updatable_elements_loader.js?cache_is_deprecated_at=20240302213936140991&"></script>
-<script src="./cover.js?cache_is_deprecated_at=20240302213936140991&"></script>
+<script src="./define_loaded_time.js"></script>
+<script src="./header_animation.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./base_elements_loader.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./scroller.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./fecher.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./color_distributer.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./skills_updatable_elements_loader.js?cache_is_deprecated_at=20240305082207603997&"></script>
+<script src="./cover.js?cache_is_deprecated_at=20240305082207603997&"></script>
 <script>window.onload = ()=>{
-    Promise.all([load_base_elements(),load_elements()]).then(()=>scroll_to_url_hash(null)).then(reveal)
+    Promise.all([load_base_elements(),load_elements()])
+    .then(()=>scroll_to_url_hash(null))
+    .then(()=>set_colors(".section h1",180,30,30,25,0,0))
+    .then(reveal)
 }</script>
 </html>
