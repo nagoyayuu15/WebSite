@@ -111,7 +111,7 @@ cache対策、index更新を施す。
 
 ## identity.html
 
-dibタグに埋め込まれる。
+divタグに埋め込まれる。
 
 ## bookshelf.json
 
