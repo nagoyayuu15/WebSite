@@ -6,7 +6,3 @@ async function get_all_files(url){
     .then(html=>Array.from(html.querySelectorAll(":not(a[href='..'])+a")))
     .then(arr=>arr.map(anc=>anc.innerHTML))
 } 
-
-async function set_into_innerHTML_of(element, url){
-    await fetch(url).then(data=>data.text()).then(html=>{element.innerHTML=html})
-}
