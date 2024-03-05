@@ -32,6 +32,7 @@ for f in glob("./updatable/weblog/*.html"):
 		idx["latest"] = max(idx["latest"],date)
 
 idx["all_tags"] = list(idx["all_tags"])
+idx["all_tags"].sort()
 idx["articles"].sort(key=lambda e:e["when"])
 idx["earliest"] = idx["earliest"].strftime("%Y/%m/%d")
 idx["latest"] = idx["latest"].strftime("%Y/%m/%d")
