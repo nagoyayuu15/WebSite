@@ -1,23 +1,23 @@
 [
     {
-        "title":"人類は衰退しました",
+        "title":"読みやすいコードのガイドライン",
         "img":"https://m.media-amazon.com/images/I/51W3muyoc2L._SY445_SX342_.jpg",
-        "when":"2024/03",
-        "supplement":["ずっと欲しかったのでついに買ってしまったラノベ"],
-        "link":"https://www.amazon.co.jp/%E4%BA%BA%E9%A1%9E%E3%81%AF%E8%A1%B0%E9%80%80%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F-1-%E3%82%AC%E3%82%AC%E3%82%AC%E6%96%87%E5%BA%AB-%E7%94%B0%E4%B8%AD-%E3%83%AD%E3%83%9F%E3%82%AA/dp/4094513086"
+        "when":"2023/06",
+        "supplement":["名大構内のBooksフロンテで見かけ購入しました。YAGNI原則やより良い命名方法その他について学びました。"],
+        "link":"https://gihyo.jp/book/2022/978-4-297-13036-7"
     },
     {
-        "title":"人類は衰退しました",
-        "img":"https://m.media-amazon.com/images/I/51W3muyoc2L._SY445_SX342_.jpg",
-        "when":"2024/04",
-        "supplement":["ずっと欲しかったのでついに買ってしまったラノベ"],
-        "link":"https://www.amazon.co.jp/%E4%BA%BA%E9%A1%9E%E3%81%AF%E8%A1%B0%E9%80%80%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F-1-%E3%82%AC%E3%82%AC%E3%82%AC%E6%96%87%E5%BA%AB-%E7%94%B0%E4%B8%AD-%E3%83%AD%E3%83%9F%E3%82%AA/dp/4094513086"
+        "title":"Rustハンズオン",
+        "img":"https://books.google.co.jp/books/publisher/content?id=AzHJEAAAQBAJ&hl=ja&pg=PA1&img=1&zoom=3&bul=1&sig=ACfU3U3qLeGdzgyhx5o0G_hbYj5uCHa4Ng&w=1280",
+        "when":"2023/11",
+        "supplement":["大学図書館で見かけ借りました。ちょうど実行速度のはやい言語を探していたので、以前から憧れがあったRustをやってみることにしました。"],
+        "link":"https://www.amazon.co.jp/Rust%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3-%E6%8E%8C%E7%94%B0%E6%B4%A5%E8%80%B6%E4%B9%83/dp/4798069353"
     },
     {
-        "title":"人類は衰退しました",
+        "title":"大学4年間の統計学が10時間でざっと学べる",
         "img":"https://m.media-amazon.com/images/I/51W3muyoc2L._SY445_SX342_.jpg",
-        "when":"1024/04",
-        "supplement":["ずっと欲しかったのでついに買ってしまったラノベ"],
-        "link":"https://www.amazon.co.jp/%E4%BA%BA%E9%A1%9E%E3%81%AF%E8%A1%B0%E9%80%80%E3%81%97%E3%81%BE%E3%81%97%E3%81%9F-1-%E3%82%AC%E3%82%AC%E3%82%AC%E6%96%87%E5%BA%AB-%E7%94%B0%E4%B8%AD-%E3%83%AD%E3%83%9F%E3%82%AA/dp/4094513086"
+        "when":"2024/02",
+        "supplement":["いい感じの難易度の教科書が大学図書館で見つからなかったのでAmazonで購入しました。書いてあることは割と初歩的だったりはしおってあったりしてあったのですが、羅針盤としてかなり役立ちました。"],
+        "link":"https://www.amazon.co.jp/Rust%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3-%E6%8E%8C%E7%94%B0%E6%B4%A5%E8%80%B6%E4%B9%83/dp/4798069353"
     }
 ]

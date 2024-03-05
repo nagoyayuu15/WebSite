@@ -117,7 +117,7 @@
         "when":null,
         "event":"スクレイピングを学ぶ",
         "supplement":[
-            "下記のイベントで株価を自動で調べるためにPython,BeautifulSoupを利用してスクレイピングを行う。"
+            "下記のイベントで株価を自動で調べるためにPython,BeautifulSoup4を利用してスクレイピングを行う。"
         ],
         "link":{
             "href":null,
@@ -177,10 +177,10 @@
         "when":"2023/3",
         "event":"シラバスのスクレイピングをする",
         "supplement":[
-            "名古屋大学のシラバスがあまりに比較しづらかったので学外者向けのシラバスをスクレイピングし、こちらで整形するプログラムをPythonにて作成した。<br>"
+            "名古屋大学のシラバスがあまりに比較しづらかったので学外者向けのシラバスをスクレイピングし、こちらで整形するプログラムをPythonにて作成した。"
         ],
         "link":{
-            "href":null,
+            "href":"./skills.html#products#syllabusScraping",
             "text":"プロダクトページへ"
         }
     },
@@ -243,10 +243,10 @@
     {
         "type":"trivial",
         "when":null,
-        "event":"Readability+=1を読む。",
+        "event":"読みやすいコードのガイドライン（技術評論社）を読む。",
         "supplement":[],
         "link":{
-            "href":null,
+            "href":"./weblog.html#bookshelf#読みやすいコードのガイドライン",
             "text":"本棚へ"
         }
     },
@@ -314,9 +314,9 @@
         "type":"trivial",
         "when":null,
         "event":"PCIやディープラーニングを数学的な観点から学ぶ",
-        "supplement":["SML-Mathematics for machine larning という英語で行われた授業だった。その最終授業の課題として、花札をプレイするAIを作った。8割のコーディングを担当。"],
+        "supplement":["SML-Mathematics for machine larning という英語で行われた授業だった。その最終授業の課題として、花札をプレイするAIを作った。大部分のコーディングを担当。"],
         "link":{
-            "href":null,
+            "href":"./skills.html#products#smlSemesterProject",
             "text":"プロダクトページへ"
         }
     },
@@ -326,7 +326,7 @@
         "event":"Rustを独学する。",
         "supplement":["ニューラルネットワーク作ろうとしたが断念。再チャレンジ予定"],
         "link":{
-            "href":"Rust ハンズオン",
+            "href":"./weblog.html#bookshelf#Rustハンズオン",
             "text":"本棚へ"
         }
     },
@@ -336,7 +336,7 @@
         "event":"統計学を復習する。",
         "supplement":[],
         "link":{
-            "href":"大学4年間の統計学が10時間でざっと学べる",
+            "href":"./weblog.html#bookshelf#大学4年間の統計学が10時間でざっと学べる",
             "text":"本棚へ"
         }
     },

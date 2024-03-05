@@ -43,7 +43,8 @@ async function load_books(){
         let a = document.createElement("a")
         a.classList.add("book")
         a.href=book.link
-
+        a.id = book.title
+        
         let h1=document.createElement("h1")
         h1.innerHTML=book.title
         let img=document.createElement("img")
