@@ -339,3 +339,7 @@ a.github:hover{
         height: 20px;
     }
 } 
+
+.section a {
+    display: inline-block;
+}
