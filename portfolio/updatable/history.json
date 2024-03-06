@@ -207,14 +207,12 @@
     {
         "type":"trivial",
         "when":"2023/4",
-        "event":"翻訳APIの叩き方を学ぶ",
+        "event":"Web APIの叩き方を学ぶ",
         "supplement":[
-            "floral-gifter.netlify.appにホストされている、",
-            "ChatGPTを利用して贈る花を選定するというサービスのバックエンドで翻訳APIを叩いた。",
-            "残念ながらAPIKeyの期限が切れているので、サービスはもはや機能しない。"
+            "入ったアプリ開発サーカルのハッカソンで携わったプロダクトで画像の取得を担当"
         ],
         "link":{
-            "href":null,
+            "href":"./skills.html#products#floralGifter",
             "text":"プロダクトページへ"
         }
     },
@@ -246,7 +244,7 @@
         "event":"読みやすいコードのガイドライン（技術評論社）を読む。",
         "supplement":[],
         "link":{
-            "href":"./weblog.html#bookshelf#読みやすいコードのガイドライン",
+            "href":"./weblog.html#bookshelf#book202306",
             "text":"本棚へ"
         }
     },
@@ -326,7 +324,7 @@
         "event":"Rustを独学する。",
         "supplement":["ニューラルネットワーク作ろうとしたが断念。再チャレンジ予定"],
         "link":{
-            "href":"./weblog.html#bookshelf#Rustハンズオン",
+            "href":"./weblog.html#bookshelf#book202311",
             "text":"本棚へ"
         }
     },
@@ -336,7 +334,7 @@
         "event":"統計学を復習する。",
         "supplement":[],
         "link":{
-            "href":"./weblog.html#bookshelf#大学4年間の統計学が10時間でざっと学べる",
+            "href":"./weblog.html#bookshelf#book202402",
             "text":"本棚へ"
         }
     },
@@ -346,8 +344,8 @@
         "event":"このポートフォリオサイトを作成する",
         "supplement":[null],
         "link":{
-            "href":null,
-            "text":null
+            "href":"./skills.html#products#portfolio",
+            "text":"プロダクトページへ"
         }
     },
     {

@@ -267,6 +267,10 @@ div.feed.feed_weblog_articles p {
         width: 400px;
         text-align: center;
     }
+    .feed.feed_bookshelf .binding{
+        height: 200px;
+        width: auto;
+    }
     .article {
         margin: 20px;
     }
@@ -398,6 +402,8 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf a.book {
         border-radius: 10px;
+        height: fit-content;
+        max-width: 300px;
     }
     .feed.feed_bookshelf .book h1{
         font-size: 30px;
@@ -552,6 +558,8 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf a.book {
         border-radius: 10px;
+        height: fit-content;
+        max-width: 300px;
     }
     .feed.feed_bookshelf .book h1{
         font-size: 30px;

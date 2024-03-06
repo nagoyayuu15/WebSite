@@ -120,6 +120,7 @@ divタグに埋め込まれる。
 ```json
 {
     "title":"",//本のタイトル
+    "id":"",
     "img":"",//url カバー画像のリンク先
     "when":"",//YYYY/MM読了日
     "supplement":[],//string[] 補足説明の文章
