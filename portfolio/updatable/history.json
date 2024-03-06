@@ -291,6 +291,16 @@
     {
         "type":"important",
         "when":null,
+        "event":"Rustを独学する。",
+        "supplement":["ニューラルネットワーク作ろうとしたが断念。再チャレンジ予定"],
+        "link":{
+            "href":"./weblog.html#bookshelf#book202311",
+            "text":"本棚へ"
+        }
+    },
+    {
+        "type":"important",
+        "when":null,
         "event":"C言語の授業を受ける。",
         "supplement":["評定はA"],
         "link":{
@@ -316,16 +326,6 @@
         "link":{
             "href":"./skills.html#products#smlSemesterProject",
             "text":"プロダクトページへ"
-        }
-    },
-    {
-        "type":"trivial",
-        "when":null,
-        "event":"Rustを独学する。",
-        "supplement":["ニューラルネットワーク作ろうとしたが断念。再チャレンジ予定"],
-        "link":{
-            "href":"./weblog.html#bookshelf#book202311",
-            "text":"本棚へ"
         }
     },
     {
