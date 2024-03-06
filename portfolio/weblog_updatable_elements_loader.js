@@ -1,7 +1,7 @@
 let weblog_index_obj;
 
 async function load_elements(){
-    let weblog_loaded = fetch("./updatable/weblog/index.json?"+now).then(data=>data.text()).then(text=>JSON.parse(text))
+    let weblog_loaded = fetch("./updatable/weblog/index.json").then(data=>data.text()).then(text=>JSON.parse(text))
     .then(obj=>weblog_index_obj = obj)
     .then(async ()=>{
         load_tags()
@@ -31,7 +31,7 @@ function load_tags(){
 }
 
 async function load_books(){
-    let books = await fetch("./updatable/bookshelf.json?"+now).then(data=>data.text()).then(text=>JSON.parse(text))
+    let books = await fetch("./updatable/bookshelf.json").then(data=>data.text()).then(text=>JSON.parse(text))
     books.sort((book_a,book_b)=>{
         let a_when = new Number(structuredClone(book_a.when).replace("/",""))
         let b_when = new Number(structuredClone(book_b.when).replace("/",""))

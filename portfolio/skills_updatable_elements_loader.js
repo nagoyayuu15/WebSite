@@ -16,7 +16,7 @@ async function load_elements(){
     let abilities_loaded = src_for_abilities.then(arr=>
         Promise.all(arr.map(async (elem)=>{
             var container = document.createElement("div")
-            string = await fetch("./updatable/abilities/"+elem+"?"+now).then(data=>data.text())
+            string = await fetch("./updatable/abilities/"+elem).then(data=>data.text())
             container.innerHTML=string
             button=container.querySelector(".button")
             button.setAttribute("jumpto",elem.split('.')[0])
@@ -29,7 +29,7 @@ async function load_elements(){
     let products_loaded = src_for_products.then(arr=>
         Promise.all(arr.map(async (elem)=>{
             container = document.createElement("div")
-            string = await fetch("./updatable/products/"+elem+"?"+now).then(data=>data.text())
+            string = await fetch("./updatable/products/"+elem).then(data=>data.text())
             container.innerHTML=string
             button=container.querySelector(".button")
             button.setAttribute("jumpto",elem.split('.')[0])
