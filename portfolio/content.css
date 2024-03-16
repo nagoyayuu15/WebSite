@@ -3,11 +3,9 @@
     overflow-x: hidden;
     position: relative;
     z-index: 3000;
-    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .content h1 {
-    font-family:Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     font-weight: bold;
 }
 

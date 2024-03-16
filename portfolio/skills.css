@@ -105,10 +105,10 @@ a.github:hover{
     }
 
     .button {
-        height: 150px;
-        min-height: 150px;
-        width: 150px;
-        min-width: 150px;
+        height: 142px;
+        min-height: 142px;
+        width: 142px;
+        min-width: 142px;
         margin-left: 10px;
         font-size: 500px;
         font-weight: 600;
@@ -147,13 +147,18 @@ a.github:hover{
     .section{
         width: 100%;
         text-wrap: wrap;
+        margin-top: 100px;
+    }
+    .section p {
+        line-height: 200%;
     }
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1300px) {/* for intermediate */
     .content {
         display: grid;
-        grid-template-columns: 0fr 450px 1fr 450px 0fr;
+        min-width: 100%;
+        grid-template-columns: 0.1fr 450px 1fr 450px 0.1fr;
         grid-template-rows: 700px 700px;    
     }
 
@@ -162,25 +167,25 @@ a.github:hover{
     }
 
     .content .products.hash {
-        grid-column: 2/4;
+        grid-column: 2;
         grid-row: 1;
         width: auto;
     }
 
     .content .products.instance {
-        grid-column: 4;
+        grid-column: 3/5;
         grid-row: 1;
         width: auto;
     }
 
     .content .abilities.hash {
-        grid-column: 3/5;
+        grid-column: 4;
         grid-row: 2;
         width: auto;
     }
 
     .content .abilities.instance {
-        grid-column: 2;
+        grid-column: 2/4;
         grid-row: 2;
         width: auto;
     }
@@ -206,27 +211,28 @@ a.github:hover{
     }
 
     .button {
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
         margin-top: 15px;
         margin-left: 15px;
         border-radius: 10px;
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 700;
     }
 
     .field {
         margin-top:5%;
-        margin-bottom:2%;
-        margin-left:2%;
-        margin-right:2%;
-        width:96%;
-        height: 93%;
+        margin-bottom:5%;
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+        height: 90%;
     }
 
     .section {
         padding-left: 5px;
         padding-right: 5px;
+        margin-top: 60px;
     }
 
     .section.dummy {
@@ -243,11 +249,15 @@ a.github:hover{
     .section a img{
         height: 20px;
     }
+    .section p {
+        line-height: 150%;
+    }
 } 
 
 @media screen and (min-width: 1300px) {/* for pc */
     .content {
         display: grid;
+        width: 100%;
         grid-template-columns: 0.3fr 450px 1fr 450px 0.3fr;
         grid-template-rows: 700px 700px;    
     }
@@ -257,25 +267,25 @@ a.github:hover{
     }
 
     .content .products.hash {
-        grid-column: 2/4;
+        grid-column: 2;
         grid-row: 1;
         width: auto;
     }
 
     .content .products.instance {
-        grid-column: 4;
+        grid-column: 3/5;
         grid-row: 1;
         width: auto;
     }
 
     .content .abilities.hash {
-        grid-column: 3/5;
+        grid-column: 4;
         grid-row: 2;
         width: auto;
     }
 
     .content .abilities.instance {
-        grid-column: 2;
+        grid-column: 2/4;
         grid-row: 2;
         width: auto;
     }
@@ -301,27 +311,28 @@ a.github:hover{
     }
 
     .button {
-        width: 140px;
-        height: 140px;
+        width: 100px;
+        height: 100px;
         margin-top: 15px;
         margin-left: 15px;
         border-radius: 10px;
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 700;
     }
 
     .field {
         margin-top:5%;
-        margin-bottom:2%;
-        margin-left:2%;
-        margin-right:2%;
-        width:96%;
-        height: 93%;
+        margin-bottom:5%;
+        margin-left:5%;
+        margin-right:5%;
+        width:90%;
+        height: 90%;
     }
 
     .section {
         padding-left: 5px;
         padding-right: 5px;
+        margin-top: 60px;
     }
 
     .section.dummy {
@@ -338,8 +349,18 @@ a.github:hover{
     .section a img{
         height: 20px;
     }
+    .section p {
+        line-height: 150%;
+    }
 } 
 
 .section a {
     display: inline-block;
+}
+
+.section.navigation {
+    color:hsl(0, 0%, 76%);
+    display: flex;
+    text-align: center;
+    justify-content: center;
 }

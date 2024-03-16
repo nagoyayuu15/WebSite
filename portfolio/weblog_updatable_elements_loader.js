@@ -7,6 +7,8 @@ async function load_elements(){
         load_tags()
         define_span()
         load_spans()
+        await update_articles()
+        return
     })
     await Promise.all([weblog_loaded,load_books()])
     return

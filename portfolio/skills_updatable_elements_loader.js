@@ -7,8 +7,6 @@ async function load_elements(){
     let dummy_section = document.createElement("div")
     dummy_section.classList.add("section")
     dummy_section.classList.add("dummy")
-    product_sections.appendChild(dummy_section.cloneNode())
-    ability_sections.appendChild(dummy_section.cloneNode())
 
     let src_for_abilities=get_all_files("./updatable/abilities/")
     let src_for_products=get_all_files("./updatable/products/")

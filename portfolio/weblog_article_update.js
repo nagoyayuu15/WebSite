@@ -1,4 +1,4 @@
-let last_state = ""
+let last_state = "uninitialized"
 let last_update = 0
 let update_in_progress = false
 
@@ -47,52 +47,68 @@ async function update_articles(){
             let side_titles_container = document.querySelector(".float_weblog_titles>ul")
             side_titles_container.innerHTML = ""
             article_container.innerHTML = ""
-            Promise.all(article_fetch_promises).then(articles=>{
-                articles.map(
-                    article_proto=>{
-                        let ident = article_proto.getElementsByClassName("id")[0].innerHTML
 
-                        let article = document.createElement("li")
-                        article.className = "article"
-                        article.id = ident
+            if (article_fetch_promises.length === 0) {
+                let article = document.createElement("li")
+                article.className = "article dummy"
 
-                        let h1 = document.createElement("h1")
-                        h1.innerHTML = article_proto.getElementsByClassName("title")[0].innerHTML
-                        
-                        let li = document.createElement("li")
-                        li.innerHTML = article_proto.getElementsByClassName("title")[0].innerHTML
-                        li.addEventListener("click",()=>{scroll_to_url_hash(hash="#"+ident)})
-                        side_titles_container.appendChild(li)
-
-                        let ul = document.createElement("ul")
-                        ul.className = "tags"
-                        article_proto.getElementsByClassName("tags")[0].innerText.split(",").map(
-                            tag=>{
-                                let li = document.createElement("li")
-                                li.className = "tag hash"
-                                li.innerText = tag
-                                li.addEventListener("click",()=>activate_tag_exclusively(tag))
-                                ul.appendChild(li)
-                            }
-                        )
-
-                        article.appendChild(h1)
-                        article.appendChild(ul)
-                        article.appendChild(article_proto.getElementsByClassName("when")[0])
-                        article.appendChild(article_proto.getElementsByClassName("main")[0])
-
-                        article_container.appendChild(article)
-                    }
-                )
-            }).then(()=>{
-                set_colors(".article h1",260, 30, 40, 30, 0, 0)
+                let p = document.createElement("div")
+                p.innerHTML = "タグを選択して記事を表示"
                 
-                set_background_colors(".article .tags li",250, 30, 90, 10, 0, 0)
-                set_colors(".article .tags li",280, 60, 50, 10, 0, 0)
+                article.appendChild(p)
 
-                set_colors_with_another_selector(".float_weblog_titles>ul>li",".float_weblog_titles>ul>li:hover",260, 100, 40, 30, 0, 0)
-            })
+                article_container.appendChild(article)
+            }else{
+                await Promise.all(article_fetch_promises).then(articles=>{
+                    articles.map(
+                        article_proto=>{
+                            let ident = article_proto.getElementsByClassName("id")[0].innerHTML
 
+                            let article = document.createElement("li")
+                            article.className = "article"
+                            article.id = ident
+
+                            let h1 = document.createElement("h1")
+                            h1.innerHTML = article_proto.getElementsByClassName("title")[0].innerHTML
+                            
+                            let li = document.createElement("li")
+                            li.innerHTML = article_proto.getElementsByClassName("title")[0].innerHTML
+                            li.addEventListener("click",()=>{scroll_to_url_hash(hash="#"+ident)})
+                            side_titles_container.appendChild(li)
+
+                            let ul = document.createElement("ul")
+                            ul.className = "tags"
+                            article_proto.getElementsByClassName("tags")[0].innerText.split(",").map(
+                                tag=>{
+                                    let li = document.createElement("li")
+                                    li.className = "tag hash"
+                                    li.innerText = tag
+                                    li.addEventListener("click",()=>activate_tag_exclusively(tag))
+                                    ul.appendChild(li)
+                                }
+                            )
+
+                            article.appendChild(h1)
+                            article.appendChild(ul)
+                            article.appendChild(article_proto.getElementsByClassName("when")[0])
+                            article.appendChild(article_proto.getElementsByClassName("main")[0])
+
+                            article_container.appendChild(article)
+                        }
+                    )
+                }).then(()=>{
+                    set_colors(".article h1",260, 30, 40, 30, 0, 0)
+                    
+                    set_background_colors(".article .tags li",250, 30, 90, 10, 0, 0)
+                    set_colors(".article .tags li",280, 60, 50, 10, 0, 0)
+
+                    set_colors_with_another_selector(".float_weblog_titles>ul>li",".float_weblog_titles>ul>li:hover",260, 100, 40, 30, 0, 0)
+                })
+
+                let dummy_article = document.createElement("div")
+                dummy_article.className = "dummy article"
+                article_container.appendChild(dummy_article)
+            }
         }
         last_state = current_state
         update_in_progress = false

@@ -21,7 +21,6 @@
     left: 0px;
     height: 0px;
     overflow: visible;
-    font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .header_floating_part ul {
@@ -107,7 +106,6 @@
         display: flex;
         margin-top: 0px;
         display: flex;
-        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
         font-size: 60px;
         margin: 0;
         text-align: center;
@@ -138,7 +136,6 @@
     /* header title */
     #header_title {
         font-size: 120px;
-        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         margin-right: 50px;
         display: flex;    
     }
@@ -170,11 +167,10 @@
     /* tool bar */
     #tool_bar{
         display: flex;
-        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;;
         font-size: 20px;
         margin: 0;
         text-align: center;
-        font-weight: 320;
+        font-weight: 500;
     }
     ul {
         list-style-type: none;
@@ -234,7 +230,6 @@
     /* header title */
     #header_title {
         font-size: 40px;
-        font-family: Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         margin-right: 50px;
         margin-left: 50px;
         display: flex;

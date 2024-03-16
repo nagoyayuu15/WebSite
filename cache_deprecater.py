@@ -12,7 +12,9 @@ except IndexError:
 files = glob.glob("./**/*.html",recursive=True)
 
 # timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S%f")
-expired_at = datetime.datetime.now(datetime.timezone.utc).strftime("%a, %d %b %Y %H:%M:%S UTC")
+expired_at = (
+    datetime.datetime.now(datetime.timezone.utc)
+).strftime("%a, %d %b %Y %H:%M:%S GMT")
 
 for f in files:
     print(f)
@@ -20,8 +22,8 @@ for f in files:
         lines = fd.read()
         # lines = re.sub(r"\?cache_is_deprecated_at=[0-9]*\&",f"?cache_is_deprecated_at={timestamp}&",lines)
         lines = re.sub(
-            r'<meta http-equiv="expires" content="(.*)">',
-            f'<meta http-equiv="expires" content="{expired_at}">',
+            r'<meta http-equiv="Last-Modified" content="(.*)">',
+            f'<meta http-equiv="Last-Modified" content="{expired_at}">',
         lines)
         fd.seek(0, os.SEEK_SET)
         fd.write(lines)

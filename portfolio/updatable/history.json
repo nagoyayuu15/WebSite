@@ -350,6 +350,16 @@
     },
     {
         "type":"trivial",
+        "when":"2024/04",
+        "event":"picoCTFに参加する",
+        "supplement":["メモリ（特にスタック）、セキュリティ、アセンブラへの関心が高まった。"],
+        "link":{
+            "href":null,
+            "text":null
+        }
+    },
+    {
+        "type":"trivial",
         "when":"2024/05",
         "event":"塾講師をやめ学習に専念する<br class=\"sp\">（予定）",
         "supplement":[null],

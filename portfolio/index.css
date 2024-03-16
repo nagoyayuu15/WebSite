@@ -40,7 +40,7 @@ a:hover {
 }
 
 /* to be responsible */
-@media screen and (max-width: 1000px) {/* for smartphone */
+@media screen and (max-width: 1100px) {/* for smartphone */
     #header_title div {
         font-size: 150px;
         font-weight: 460;
@@ -66,9 +66,15 @@ a:hover {
         border-radius: 5px;
         padding: 5px;
     }
+    .page_name {
+        width: 167px;
+    }
+    .headline {
+        width: 140px;
+    }
 }
 
-@media screen and (min-width: 1000px) {/* for pc */
+@media screen and (min-width: 1100px) {/* for pc */
     #header_title div {
         font-size: 150px;
         font-weight: 460;
@@ -96,4 +102,11 @@ a:hover {
         border-radius: 5px;
         padding: 3px;
     }
+    .page_name {
+        width: 200px;
+    }
+    .headline {
+        width: 180px;
+    }
 } 
+

@@ -61,10 +61,6 @@ div.feed.feed_weblog_articles p {
 .feed.controler.tags .tag.selected:hover::after{
     background-color: hsla(303, 0%, 100%, 0.2);
 }
-.feed.controler.tags ul{
-    overflow-y: scroll;
-    overflow-x: hidden;
-}
 
 .feed.controler.time .scale .button{
     background-color: hsl(0, 0%, 90%);
@@ -98,12 +94,14 @@ div.feed.feed_weblog_articles p {
     display: flex;
     text-align: center;
     position: relative;
+    overflow: hidden;
 }
 .feed.controler.time .span .button::after {
     position: absolute;
     content:"";
-    width: 100%;
+    width: 120%;
     height: 100%;
+    left: 0px;
     background-color: hsl(0, 0%, 0%, 0%);
     transition: all 0.3s 0s ease;
 }
@@ -148,7 +146,7 @@ div.feed.feed_weblog_articles p {
     flex-direction: column;
     align-items: center;
     background-color: hsl(0, 0%, 98%);
-    height: 90%;
+    min-height: 90%;
     transition: all 0.3s 0s ease;
 }
 
@@ -175,6 +173,11 @@ div.feed.feed_weblog_articles p {
     user-select: none;
     cursor: pointer;
 }
+
+.article.dummy {
+    color:hsl(0, 0%, 70%);
+}
+
 /* to be responsible */
 @media screen and (max-width: 1000px) {/* for smartphone */
     .navigation{
@@ -198,11 +201,13 @@ div.feed.feed_weblog_articles p {
         text-wrap: nowrap;
         width: fit-content;
         margin-right: 10px;
-        border-radius: 3px;
+        border-radius: 20px;
         height: 90%;
         display: flex;
         justify-content: center;
         align-items: center;
+        padding-left: 10px;
+        padding-right: 10px;
     }
     .feed.controler.time{
         display: grid;
@@ -283,12 +288,19 @@ div.feed.feed_weblog_articles p {
     .feed.controler.tags>ul{
         height: 90%;
     }
+    .feed.controler.tags ul{
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .dummy.article {
+        height: 1800px;
+    }    
 }
 @media screen and (min-width: 1000px) and (max-width: 1300px){/* for intermediate */
     .content {
         display: grid;
         grid-template-columns: 0.4fr 2fr 6fr 0.4fr;
-        grid-template-rows: 420px 420px auto;
+        grid-template-rows: 390px 420px auto;
     }
     .feed {
         margin: 5px;
@@ -378,8 +390,9 @@ div.feed.feed_weblog_articles p {
         overflow: hidden;
     }
     .feed.controler.time .span .button {
-        margin: 3px;
-        border-radius: 3px;
+        border-radius: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .feed.feed_weblog_articles .article {
         margin-top: 25px;
@@ -402,7 +415,7 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf a.book {
         border-radius: 10px;
-        height: fit-content;
+        height: auto;
         max-width: 300px;
     }
     .feed.feed_bookshelf .book h1{
@@ -428,8 +441,13 @@ div.feed.feed_weblog_articles p {
         margin-bottom: 5px;
         border-radius: 10px;
     }
+    .article p{
+        line-height: 150%;
+    }
     .feed.feed_weblog_articles>.articles{
         margin: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
     .feed.controler.tags .tag{
         height: fit-content;
@@ -438,13 +456,20 @@ div.feed.feed_weblog_articles p {
         grid-column: 2/4;
         grid-row: 3;
     }
+    .feed.controler.tags ul{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .dummy.article {
+        height: 700px;
+    }    
 } 
 
 @media screen and (min-width: 1300px) {/* for pc */
     .content {
         display: grid;
         grid-template-columns: 1fr 2fr 6fr 1fr;
-        grid-template-rows: 420px 420px auto;
+        grid-template-rows: 390px 420px auto;
     }
     .feed {
         margin: 5px;
@@ -534,8 +559,9 @@ div.feed.feed_weblog_articles p {
         overflow: hidden;
     }
     .feed.controler.time .span .button {
-        margin: 3px;
-        border-radius: 3px;
+        border-radius: 0px;
+        padding-left: 5px;
+        padding-right: 5px;
     }
     .feed.feed_weblog_articles .article {
         margin-top: 25px;
@@ -558,7 +584,7 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf a.book {
         border-radius: 10px;
-        height: fit-content;
+        height: auto;
         max-width: 300px;
     }
     .feed.feed_bookshelf .book h1{
@@ -584,8 +610,13 @@ div.feed.feed_weblog_articles p {
     .article .main{
         margin-top: 20px;
     }
+    .article p{
+        line-height: 150%;
+    }
     .feed.feed_weblog_articles>.articles{
         margin: 10px;
+        margin-left: 50px;
+        margin-right: 50px;
     }
     .feed.controler.tags .tag{
         height: fit-content;
@@ -594,4 +625,11 @@ div.feed.feed_weblog_articles p {
         grid-column: 2/4;
         grid-row: 3;
     }
+    .feed.controler.tags ul{
+        overflow-y: scroll;
+        overflow-x: hidden;
+    }
+    .dummy.article {
+        height: 700px;
+    }    
 } 

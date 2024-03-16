@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="./content.css">
     <link rel="stylesheet" href="./identity.css">
     <meta charset="utf-8">
-    <meta http-equiv="expires" content="Wed, 06 Mar 2024 08:50:44 UTC">
+    <meta http-equiv="Last-Modified" content="Sat, 16 Mar 2024 17:33:20 GMT">
 </head>
 <body>
 
@@ -76,9 +76,9 @@
     Promise.all([load_base_elements(),load_elements()])
     .then(()=>scroll_to_url_hash(null))
     .then(()=>{
-        set_colors(".content>.feed_hobby>ul>li",55,48,35,6,5,5)
-        set_stroke_colors(".content>.feed_carrier>ul>li.important svg",55,38,68,6,5,1)
-        set_colors(".content>.feed h1",55,50,62,6,7,1)
+        set_colors(".content>.feed_hobby>ul>li",55,48,35,10,5,5)
+        set_stroke_colors(".content>.feed_carrier>ul>li.important svg",55,38,68,0,0,0)
+        set_colors(".content>.feed h1",55,50,62,20,7,1)
     })
     .then(reveal)
 }</script>
