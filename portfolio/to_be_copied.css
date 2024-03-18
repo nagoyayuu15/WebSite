@@ -1,8 +1,156 @@
-.page{
+#p1 .title {
+    display: flex;
+    font-size: 40mm;
+    align-items: center;
+}
+
+#p1 .title img {
+    height: 40mm;
+}
+
+#p1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#p1 .name {
+    font-size: 9mm;
+}
+
+#p2 ul.index {
+    margin-top: 14mm;
+}
+
+#p2 li {
+    position: relative;
+    overflow: hidden;
+    width: 110mm;
+    text-wrap: nowrap;
+}
+
+#p2 li label {
+    position: relative;
+    display: inline-block;
+    margin-right: 70mm;
+    z-index: 100;
+    padding-right: 5mm;
+}
+
+#p2 li page_number{
+    position: absolute;
+    right: 0mm;
+    background-color: var(--bg);
+    z-index: 3000;
+    padding-left: 5mm;
+}
+
+#p2 li label::after{
+    content: "........................................................................................................";
+    margin-left: 5mm;
+}
+
+#p2 h4 {
+    margin-top: 1mm;
+    margin-bottom: 1mm;
+}
+
+#p3>div>img {
+    height: 50mm;
+}
+
+#p3 .anotations {
+    margin-right: 10mm;
+}
+
+#p3 when {
+    display: inline-block;
+    width: 20mm;
+}
+
+#p3 .academic-recode {
+    margin-top: 0mm;
+}
+
+#p3 ul.carrier {
+    margin-top: 0mm;
+}
+
+#p4 ul.grades class {
+    display: inline-block;
+    width: 100mm;
+}
+
+p>hash{
+    font-size: 8mm;
+    font-weight: 500;
+}
+
+p {
+    padding-left: 20mm;
+    padding-right: 20mm;
+    line-height: 200%;
+}
+
+ul {
+    list-style-type: none;
+}
+
+h1 {
+    text-align: center;
+    width: 100%;
+}
+
+.flex {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.right {
+    text-align: right;
+}
+
+page{
     padding: 15mm;
     width: 210mm;
-    height: 297mm;
+    /* height: 297mm; */
+    height: 307mm;
     overflow: hidden;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer{
+    position: absolute;
+    bottom: 10mm;
+    width: 100%;
+    left: 0mm;
+    text-align: center;
+}
+
+footer>img {
+    position: absolute;
+    right: 10mm;
+    bottom: 0mm;
+    width: 25mm;
+    height: 25mm;
+}
+
+img {
+    max-width: 150mm;
+    max-height: 290mm;
+}
+
+body {
+    color: hsl(0,0%,20%);
+}
+
+page>ul{
+    padding: 0mm;
 }
 
 @media screen {
@@ -12,8 +160,9 @@
         flex-direction: column;
         align-items: center;
         padding-bottom: 10mm;
+        --bg: rgb(240, 240, 240);
     }
-    .page {
+    page {
         margin-top: 10mm;
         background-color: rgb(240, 240, 240);
         border-radius: 3mm;
@@ -63,6 +212,9 @@
 }
 
 @media print {
+    body{
+        --bg: white;
+    }
     .back_to_top{
         display: none;
     }

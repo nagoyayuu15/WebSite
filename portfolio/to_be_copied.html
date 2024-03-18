@@ -1,22 +1,193 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- <meta http-equiv="Last-Modified" content="Mon, 18 Mar 2024 09:32:32 GMT"> -->
     <title>Portfolio-Copy | HB</title>
     <meta nama="description" content="pages to be printed out">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="stylesheet" href="./to_be_copied.css">
     <meta charset="utf-8">
-    <meta http-equiv="Last-Modified" content="Sat, 16 Mar 2024 17:33:20 GMT">
 </head>
 <body>
     <!-- <a href="./" style="display:block; width:100%; height:100%; font-size: 500px;">WIP</a> -->
     <a href="./" class="back_to_top"><div>&lt;</div></a>
-    <div class="page">work in progress</div>
-    <div class="page">work in progress</div>
-    <div class="page">work in progress</div>
-    <div class="page">work in progress</div>
-    <div class="page">work in progress</div>
-    <div class="page">work in progress</div>
-    <div class="page">work in progress</div>
+    
+    <page id="p1">
+        <div class="title">
+            <img src="/icon.svg" alt="[ICON]">
+            <div>P</div>
+            <div>o</div>
+            <div>r</div>
+            <div>t</div>
+            <div>f</div>
+            <div>o</div>
+            <div>l</div>
+            <div>i</div>
+            <div>o</div>
+        </div>
+        <div class="name">
+            槫林 優 (Kurebayashi Yu)
+        </div>
+        <footer>2024/03 更新 <img src="./code_to_portfolio.png"></footer>
+    </page>
+
+    <page id="p2">
+        <h1>目次</h1>
+        <ul class="index">
+            <li><h4>基本情報</h4></li>
+            <li><label>個人情報</label><page_number>3</page_number></li>
+            <li><label>経歴</label><page_number>3</page_number></li>
+            <li><h4>技能</h4></li>
+            <li><label>学業成績</label><page_number>4</page_number></li>
+            <li><label>既習技術</label><page_number>5</page_number></li>
+            <li><label>プロダクト</label><page_number>6-9</page_number></li>
+            <li></li>
+        </ul>
+        <footer>-2-<img src="./code_to_portfolio.png"></footer>
+    </page>
+
+    <page id="p3">
+        <h1>個人情報</h1>
+        <div class="flex">
+            <div class="anotations">
+                名前: 槫林 優 (クレバヤシ ユウ)<br>
+                年齢: 19<br>
+                所属: 名古屋大学情報学部コンピュータ科学科<br>
+                学年: 学部2年 (2024年04月時点)<br>
+                mail: nagoyayuu15 gmail.com<br>
+            </div>
+            <img src="./face.jpg">
+        </div>
+        <h1>経歴</h1>
+        <ul class="carrier">
+            <li><h2 class="academic-recode">学歴</h2></li>
+            <li><when>2020/4</when><event>静岡県立榛原高校入学</event></li>
+            <li><when>2023/3</when><event>静岡県立榛原高校卒業</event></li>
+            <li><when>2023/4</when><event>名古屋大学情報学部コンピュータ科学科入学</event></li>
+            <li><h2>職歴</h2></li>
+            <li><when>2023/10</when><event>匠ゼミナール 香流校 入社(アルバイト)</event></li>
+            <li class="right">以上</li>
+        </ul>
+        <footer>-3-<img src="./code_to_portfolio.png"></footer>
+    </page>
+    <page id="p4">
+        <h1>学業成績</h1>
+        <ul class="grades">
+            <li><class>SML (Mathematics for machine learning)</class><grade>A+</grade></li>
+            <li><class>情報セキュリティとリテラシー１</class><grade>A</grade></li>
+            <li><class>情報セキュリティとリテラシー２</class><grade>A+</grade></li>
+            <li><class>プログラミング１</class><grade>A+</grade></li>
+            <li><class> プログラミング２</class><grade>A+</grade></li>
+            <li>他</li>
+        </ul>
+        <div>計53単位 GPA 4.08</div>
+        <footer>-4-<img src="./code_to_portfolio.png"></footer>
+    </page>
+    <page id="p5">
+        <h1>既習技術</h1>
+        <p><hash>python: </hash> 
+            最も親しみ深い言語です。中学生の頃、batch scriptより利便性の高い言語を探していたとき見つけたことをきっかけに、独学で習得してきました。
+            型付けが緩く、書くことが少なくて済むというのは初学者としてはかなりありがたい特徴でした。
+            ライブラリの使い方などは、まだまだ習熟が足りないと自覚していますが、素のPythonについてはそこそこ深いところまで知っているという自負があります。<br>
+            最近ではちゃんと型をつけれるようになってきたので、型チェッカーの恩恵も受けられていい感じです。
+            しかし、有名ライブラリなどで、まだ型アノテーションと実態があっていなかったりAnyが帰ってきたりするので、今後に期待したいところ。
+            大学でpythonの授業が2つあったのですが、どちらも評定はA+でした。
+        </p>
+        <p><hash>C: </hash>
+            授業で初めて扱いましたが、その授業の評定はA+でした。
+            C言語を学ぶことによってメモリへの造詣が深まったと思います。アセンブリ言語にチャレンジする前には必ずC言語は習熟しておいたほうがいいと感じました。
+            一方で、これを実務で使いたいとは全く思いませんでした。確かに早いのかもしれませんが、Rustのほうがよっぽど使いやすいし安全だと思います…。ホワイトハウスもそう言ってる。
+            しかし多くのプログラム、例えばCPythonなどがCで書かれているので読めるようにはなるべきですね。
+        </p>
+        <p><hash>HTML/CSS/JS: </hash>
+            当然のことながら、Webページの制作に使いました。このポートフォリオもHTMLとCSSをガリガリ書いて作りました。
+            divタグに頼り過ぎな気がしなくもないですが、意図する見た目や動作にすることはできるようになったと思います。
+            今後はもう少し保守性の高い書き方ができるようになりたいです。
+        </p>
+        <p><hash>Rust: </hash>
+            授業でC言語を勉強する前に勉強し始めたので、人生で初めて勉強した低級言語になります。後に習ったC言語と比較してもかなりモダンでいい感じだと思います。
+            まずは入門書で基礎を知り、その後ネットで調べつつ…という形で学習しました。
+            実際やって見る前は厳格な型付けと所有権があって難しい言語だ…と聞いていたのですが、むしろ”継承より合成”という考え方のほうが自分には難しく感じられます。
+            所有権については書いているうちになれてしまいますし、厳格な型付けについてはGenericsがしっかり活用できればむしろ書きやすい要素です（補完さまさまです）。
+            一方で、長いことclassを前提にしてプログラムを書いていたので、traitとstructで組み立てていくという方法がなかなか馴染みません。
+            この辺りを身に着けてRustyなコードがかけるようになればなぁと思います。
+        </p>
+        <footer>-5-<img src="./code_to_portfolio.png"></footer>
+    </page>
+    <page id="p6">
+        <h1>プロダクト</h1>
+        <h2>サークル活動</h2>
+        <p>アプリ開発団体jackというサークルに所属しており、そのメンバーとして開発したプロダクトがいくつかあります。</p>
+        <p>
+            <hash>FloralGifter: </hash>
+            3日間でなにかプロダクトを作り上げるというサークルのイベントに参加して制作しました。
+            floral-gifter.netlify.appにホストされています。ChatGPTを利用して贈る花を選定するというサービスで、私はバックエンドで花の画像を取得してくる部分を担当しました。
+            PythonのRequestsを使ってWebサービスのAPIと格闘していました。残念ながらAPIKeyが切れているので、機能は停止しています。
+            <br><br>https://github.com/jack-app/jackHack2023_B
+        </p>
+        <img src="./floral_gifter_screenshot.png">
+        <footer>-6-<img src="./code_to_portfolio.png"></footer>
+    </page>
+    <page id="p7">
+        <h1>プロダクト</h1>
+        <h2>サークル活動</h2>
+        <p>
+            <hash>snspace: </hash>
+            2023/06の名大祭で発表するためにチームで開発したものです。プロジェクト初期に精力的に動きました。
+            入力した文章が単語ごとに分割されて、星の周りをぐるぐる飛び回る、というものです。
+            入力した文字をバックエンドのMeCabに渡して単語ごとに分割したり、入力された内容を保存、読み出ししたりできるようにしました。（この時点ではまだリレーショナル・データベースは用いていませんでした。）
+            また、円の周りを文字が回るようにCSSでアニメーションさせたりもしました。
+            <br><br>https://github.com/jack-app/meidaisai2023_H
+        </p>
+        <img src="./snspace_screenshot.png">
+        <footer>-7-<img src="./code_to_portfolio.png"></footer>
+    </page>
+    <page id="p8">
+        <h1>プロダクト</h1>
+        <h2>個人活動</h2>
+        <p>
+            <hash>syllabusConverter: </hash>
+            大学のシラバスが複数の授業の比較にあまりにも向いていなかったので、スクレイピングしてこちらで整形しようとしたものです。結局学外向けシラバスなので情報が乏しく、実用性はあまりありませんでした。
+            また、どうせなら公開しようという程度にreadmeを書いたので使い方も複雑怪奇でユーザーフレンドリーと言えるものではないですね。
+            <br><br>https://github.com/nagoyayuu15/SyllabusScraping
+        </p>
+        <img src="./syllabus_converter_screenshot.png">
+        <p>
+            <hash>TranslatorBot: </hash>
+            日本の英語を扱えない友人とフィンランドの友人がいるDiscordサーバーに参加しており、
+            そこでのコミュニケーションが円滑に行えるように、TypeScriptによって翻訳Botを作成しました。
+            結局、ほとんど活用されることはなかったのですが…。<br>
+            TypeScriptを使った理由はJavaScriptにClassがなかったために非常にやりづらいと感じたからです。
+            静的型付けの安定性に魅せられたという面もあります。
+            <br><br>https://github.com/nagoyayuu15/translator
+        </p>
+        <footer>-8-<img src="./code_to_portfolio.png"></footer>
+    </page>
+    <page id="p9">
+        <h1>プロダクト</h1>
+        <h2>個人活動</h2>
+        <p>
+            <hash>portfolio: </hash>
+            HTML/CSS/JSを用いたオーソドックスな技術構成で、フレームワークなどは特に使っていません。頻繁に更新する要素を外部に分離し、動的に読み込むなど工夫しました。
+            デザインの方もスマホ表示、ＰＣ表示の両方に対応できるように頑張ってみました。
+            Weblogページは特にダイナミックにリソースを読み込みます。この仕組みを作る過程でかなりPromiseと仲良くなった気がしました。
+            レスポンシブ対応も最初は2段階だけだったのですが、3段階に増やしてみたりと色々こだわって見ました。
+            だた、隔離した部分以外の保守性が非常に悪い（
+            特にCSSは地獄絵図です。HTMLもiframeを使わずに動的に読み込む関係で、はじめから把握していないと何がどう読み込まれるのか、わからなくなっても不思議ではないことになっています。
+            ）のでその辺りは要改善だなと思います。
+        </p>
+        <p>
+            WebサーバはNginxを使っています。特に理由はなかったのですが、後々調べてみたところApacheより同時接続に強いサーバーらしいです。
+            その代わりに複雑な処理は苦手だとか。<br>
+            このポートフォリオに何千とアクセスが集中するとは考え難いですが、バックエンドでの処理は無いと言ってもいいくらいの構成なので、
+            奇しくもこのポートフォリオの配信にはNginxがぴったりだったみたいですね。
+        </p>
+        <p>
+            また、ポートフォリオの作成にあたって、アプリ開発団体jackのメンバーの皆様に改善点を指摘していただいたり、改善案を提案して頂いたりしました。
+            そのおかげでポートフォリオのクオリティを増すことができました。この場を借りてお礼させていただきます。
+            <br><br>https://github.com/nagoyayuu15/WebSite
+        </p>
+        <footer>-9-<img src="./code_to_portfolio.png"></footer>
+    </page>
 </body>
 </html>
