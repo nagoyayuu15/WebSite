@@ -36,7 +36,7 @@ async function update_articles(){
                     if (valid_tag_included){
                         let article_ident = article.file.match(/\/(?<ident>[^\/]*)\.html$/).groups["ident"]//file name
                         article_fetch_promises.push(
-                            fetch(article.file).then(data=>data.text()).then(string=>new DOMParser().parseFromString(
+                            fetch(article.file+url_param_updated_at).then(data=>data.text()).then(string=>new DOMParser().parseFromString(
                                 string+"<div class=\"id\">"+article_ident+"</div>",
                             "text/html"))
                         )

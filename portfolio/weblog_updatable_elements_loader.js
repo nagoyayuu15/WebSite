@@ -1,7 +1,7 @@
 let weblog_index_obj;
 
 async function load_elements(){
-    let weblog_loaded = fetch("./weblog_index.json").then(data=>data.text()).then(text=>JSON.parse(text))
+    let weblog_loaded = fetch("./weblog_index.json" + url_param_updated_at).then(data=>data.text()).then(text=>JSON.parse(text))
     .then(obj=>weblog_index_obj = obj)
     .then(async ()=>{
         load_tags()

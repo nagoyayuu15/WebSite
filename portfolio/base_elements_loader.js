@@ -1,11 +1,11 @@
 async function load_base_elements() {
 header = document.querySelector("div.header")
-header_loaded = fetch("./header.html")
+header_loaded = fetch("./header.html" + url_param_fragment_version)
     .then(data=>data.text())
     .then(html=>{header.innerHTML = html})
 
 header_floating_part = document.querySelector("div.header_floating_part")
-header_floating_part_loaded = fetch("./header_floating_part.html")
+header_floating_part_loaded = fetch("./header_floating_part.html" + url_param_fragment_version)
     .then(data=>data.text())
     .then(html=>{header_floating_part.innerHTML = html})
 
@@ -19,7 +19,7 @@ header_elements_completed = Promise.all([header_loaded,header_floating_part_load
 )
 
 footer = document.querySelector("div.footer")
-footer_elements_completed = fetch("./footer.html")
+footer_elements_completed = fetch("./footer.html" + url_param_fragment_version)
     .then(data=>data.text())
     .then(html=>{footer.innerHTML = html})
     .then(()=>{
