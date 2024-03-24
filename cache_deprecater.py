@@ -12,8 +12,8 @@ except IndexError:
 files = glob.glob("./**/*.html",recursive=True)
 files.append("./portfolio/define_updated_time.js")
 
-CSS_VERSION = "1"
-FRAGMENT_VERSION = "1"
+CSS_VERSION = "2"
+FRAGMENT_VERSION = "2"
 SCRIPT_VERSION = "1"
 
 # timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S%f")
@@ -51,5 +51,5 @@ for f in files:
             f'?script_version={SCRIPT_VERSION}&',
         lines)
     
-    with open(f,"r") as fd:
+    with open(f,"w") as fd:
         fd.write(lines)
