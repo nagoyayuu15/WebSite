@@ -19,7 +19,6 @@ function load_tags(){
     all.addEventListener("click", update_articles)
     all.addEventListener("mouseover", update_articles)
     let tags_container = document.querySelector(".feed.controler.tags>ul")
-    weblog_index_obj.all_tags.sort()
     weblog_index_obj.all_tags.forEach(elem => {
         let li = document.createElement("li")
         li.classList.add("tag")

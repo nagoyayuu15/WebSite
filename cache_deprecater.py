@@ -14,7 +14,7 @@ files.append("./portfolio/define_updated_time.js")
 
 CSS_VERSION = "2"
 FRAGMENT_VERSION = "2"
-SCRIPT_VERSION = "1"
+SCRIPT_VERSION = "2"
 
 # timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S%f")
 expired_at = (

@@ -9,6 +9,7 @@ idx = {
 	"earliest":datetime.now(),
 	"latest":datetime(1900,1,1)
 }
+tag_appearance = {}
 article = {
 	"tags":[],
 	"file":"",
@@ -27,13 +28,18 @@ for f in glob("./updatable/weblog/*.html"):
 				"when":bsobj.select_one(".when").contents[0],
 			}
 		)
+		
 		idx["all_tags"] |= tagset
 		idx["earliest"] = min(idx["earliest"],date)
 		idx["latest"] = max(idx["latest"],date)
 
+		for tag in tagset:
+			tag_appearance[tag] = tag_appearance.get(tag,0) + 1
+
 idx["all_tags"] = list(idx["all_tags"])
 idx["all_tags"].sort()
-idx["articles"].sort(key=lambda e:e["when"])
+idx["all_tags"].sort(key=lambda tag:-tag_appearance[tag])#more frequent = upper
+idx["articles"].sort(key=lambda article:article["when"])
 idx["earliest"] = idx["earliest"].strftime("%Y/%m/%d")
 idx["latest"] = idx["latest"].strftime("%Y/%m/%d")
 
