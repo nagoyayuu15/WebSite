@@ -37,5 +37,5 @@ idx["articles"].sort(key=lambda e:e["when"])
 idx["earliest"] = idx["earliest"].strftime("%Y/%m/%d")
 idx["latest"] = idx["latest"].strftime("%Y/%m/%d")
 
-with open("./updatable/weblog/index.json",'w',encoding="utf-8") as fp:
+with open("./weblog_index.json",'w',encoding="utf-8") as fp:
 	json.dump(idx,fp)

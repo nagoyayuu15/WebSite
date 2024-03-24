@@ -1,23 +1,23 @@
 async function load_elements() {
 
 let identity = document.querySelector("div.anotation-content")
-let identity_done = fetch("./updatable/identity.html").then(data=>data.text()).then(html=>{
+let identity_done = fetch("./updatable/identity.html" + url_param_updated_at).then(data=>data.text()).then(html=>{
     identity.innerHTML = html
 })
 
 let hobby = document.querySelector(".feed_hobby .main")
-let hobby_done = fetch("./updatable/hobby.html").then(data=>data.text()).then(html=>{
+let hobby_done = fetch("./updatable/hobby.html" + url_param_updated_at).then(data=>data.text()).then(html=>{
     hobby.innerHTML = html
 })
 
 let comment = document.querySelector(".feed_comment .main")
-let comment_done = fetch("./updatable/comment.html").then(data=>data.text()).then(html=>{
+let comment_done = fetch("./updatable/comment.html" + url_param_updated_at).then(data=>data.text()).then(html=>{
     comment.innerHTML = html
 })
 
 let history = document.querySelector(".feed_carrier>ul")
 let circle_svg=fetch("./circle.svg").then(data=>data.text())
-let history_recodes = fetch("./updatable/history.json").then(data=>data.text()).then(json=>JSON.parse(json))
+let history_recodes = fetch("./updatable/history.json" + url_param_updated_at).then(data=>data.text()).then(json=>JSON.parse(json))
 let history_done = Promise.all([circle_svg,history_recodes]).then((res)=>{
     let circle = res[0]
     let obj = res[1]

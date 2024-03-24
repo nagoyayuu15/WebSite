@@ -159,7 +159,3 @@ divタグに埋め込まれる。
     本文
 </div>
 ```
-
-## index.json
-
-make_weblog_index.pyによる自動更新

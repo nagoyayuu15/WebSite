@@ -87,8 +87,20 @@ a.github:hover{
     background-color: rgb(50, 50, 50);
 }
 
+.button {
+    user-select: none;
+}
+
 /* to be responsible */
 @media screen and (max-width: 1000px) {/* for smartphone */
+    .section>img {
+        display: block;
+        max-width: 700px;
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .buttons{
         display: flex;
         width: 100%;
@@ -155,6 +167,14 @@ a.github:hover{
 }
 
 @media screen and (min-width: 1000px) and (max-width: 1300px) {/* for intermediate */
+    .section>img {
+        display: block;
+        max-width: 500px;
+        margin: 20px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     .content {
         display: grid;
         min-width: 100%;
