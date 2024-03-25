@@ -13,7 +13,7 @@ files = glob.glob("./**/*.html",recursive=True)
 files.append("./portfolio/define_updated_time.js")
 
 CSS_VERSION = "4.2"
-FRAGMENT_VERSION = "3"
+FRAGMENT_VERSION = "4"
 SCRIPT_VERSION = "7"
 
 # timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S%f")

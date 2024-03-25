@@ -16,7 +16,7 @@ cache対策、index更新を施す。
 ~/portfolio/
 
 - index.html
-- to_be_copied.html
+- updatable/to_be_copied.html
 - identity.html
     - ### base_elements
     - header.html
