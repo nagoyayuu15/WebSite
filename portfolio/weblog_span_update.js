@@ -40,19 +40,19 @@ function load_spans_for_all(){
     span_container.appendChild(li)
 }
 function load_spans_for(month){
-    let span_container = document.querySelector(".span>ul")
+    const span_container = document.querySelector(".span>ul")
 
-    let earliest_date = earliest()
+    const earliest_date = earliest()
     earliest_date.setDate(1)
     earliest_date.setMonth(0)
-    let latest_date = latest()
+    const latest_date = latest()
     latest_date.setDate(1)
     latest_date.setMonth(11)
-    var current = earliest_date
+    let current = earliest_date
     while(current<=latest_date){
-        let next = structuredClone(current)
+        const next = structuredClone(current)
         next.setMonth(current.getMonth()+month)
-        let li = document.createElement("li")
+        const li = document.createElement("li")
         li.className = "button toggle m" + month
         if (month == 1){
             li.innerHTML = `<div class="span_range">${current.getFullYear()}/${current.getMonth()+1}</div><div class="number_of_articles">0</div>`
@@ -60,17 +60,17 @@ function load_spans_for(month){
             li.innerHTML = `<div class="span_range">${current.getFullYear()}/${current.getMonth()+1}-${current.getMonth()+month}</div><div class="number_of_articles">0</div>`
         }
 
-        (async()=>{
-            var count = 0
-            for (let article of weblog_index_obj.articles) {
-                setTimeout(1)
-                let date = date_parser(article.when)
+        (async(current,next)=>{
+            let count = 0
+            for (const article of weblog_index_obj.articles) {
+                await new Promise(resolve=>setTimeout(resolve,1))
+                const date = date_parser(article.when)
                 count += current <= date && date < next
                 li.querySelector(".number_of_articles").innerHTML = count
             }
-        })();
+        })(current,next);
 
-        let binded_span = structuredClone(current)
+        const binded_span = structuredClone(current)
         bind_button_with_span(li,(bool)=>change_span(binded_span,month,bool))
         li.addEventListener("mouseover",update_articles)
         li.addEventListener("click",update_articles)

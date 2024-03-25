@@ -26,6 +26,12 @@ a {
     color: rgb(77, 77, 77);
 }
 
+img {
+	user-drag: none;
+	-webkit-user-drag: none;
+	-moz-user-select: none;
+}
+
 .phantom_anchor {
     height: 0px;
     width: 0px;

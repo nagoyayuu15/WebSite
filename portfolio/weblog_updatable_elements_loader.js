@@ -28,19 +28,48 @@ function load_tags(){
         li.classList.add("toggle")
         li.innerHTML = `<div class="tag_name">${elem}</div><div class="number_of_articles">0</div>`;
 
-        (async()=>{
-            var count = 0
-            for (let article of weblog_index_obj.articles) {
-                setTimeout(1)
-                count += article.tags.includes(elem)
-                li.querySelector(".number_of_articles").innerHTML = count
-            }
-        })();
-
         li.addEventListener("click", update_articles)
         li.addEventListener("mouseover", update_articles)
         tags_container.appendChild(li)
     }
+}
+
+
+async function update_article_number_indicator_for_tags(){
+
+    const number_of_articles_in_span = document.querySelector(".feed.controler.tags .tag.all .number_of_articles")
+    
+    let count = 0
+    for (let div of document.querySelectorAll(".feed.controler.time .span li.selected .number_of_articles")){
+        count += Number(div.innerHTML)
+    }
+    
+    //only to animate
+    (async(count) => {
+        for (let i=0;i<=count;i++) {
+            await new Promise(resolve=>setTimeout(resolve,1))
+            number_of_articles_in_span.innerHTML = i
+        }
+    })(count)
+
+    const tags = document.querySelectorAll(".feed.controler.tags .tag.hash")
+    const update_promises = []
+    for (let tag of tags){
+        const closure = async ()=>{
+            let count = 0
+            for (let article of weblog_index_obj.articles) {
+                await new Promise(resolve=>setTimeout(resolve,1))//allow blocking
+                count += article.tags.includes(tag.querySelector(".tag_name").innerHTML) && is_inspan(article.when)
+                tag.querySelector(".number_of_articles").innerHTML = count
+            }
+            return 
+        }
+
+        update_promises.push(closure())
+    }
+
+    await Promise.all(update_promises)
+    return
 }
 
 async function load_books(){

@@ -1,4 +1,5 @@
-let last_state = "uninitialized"
+let last_tags = "uninitialized"
+let last_span = "uninitialized"
 let last_update = 0
 let update_in_progress = false
 
@@ -15,9 +16,14 @@ async function update_articles(){
         }
         console.log("checking if differences exist")
         let valid_tags = get_valid_tags()
-        let current_state = JSON.stringify(span)+valid_tags.join("")
-        console.log("some differences: ", current_state!=last_state)
-        if (current_state!=last_state){
+        let current_tags = valid_tags.join("")
+        let current_span = JSON.stringify(span)
+        console.log("some differences: ", current_tags!=last_tags || current_span!=last_span)
+        if (current_span!=last_span){
+            console.log("going to update article number indicators for tags")
+            update_article_number_indicator_for_tags()
+        }
+        if (current_tags!=last_tags || current_span!=last_span){
             console.log("fetching sources")
             let article_fetch_promises = []
             for (let article_idx in weblog_index_obj.articles){
@@ -110,7 +116,8 @@ async function update_articles(){
                 article_container.appendChild(dummy_article)
             }
         }
-        last_state = current_state
+        last_tags = current_tags
+        last_span = current_span
         update_in_progress = false
         return
     }

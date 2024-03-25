@@ -184,6 +184,7 @@ page>ul{
             border-radius: 10mm;
             transition: all 0.3s 0s ease;
             z-index: 12000;
+            user-select: none;
         }
         .back_to_top>div:hover{
             background-color: hsl(0, 58%, 85%);
