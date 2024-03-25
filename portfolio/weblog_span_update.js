@@ -36,6 +36,8 @@ function load_spans_for_all(){
     bind_button_with_span(li,(bool)=>change_all_span(bool))
     li.addEventListener("mouseover",update_articles)
     li.addEventListener("click",update_articles)
+    li.addEventListener("mousemove",update_articles)
+    li.addEventListener("mouseout",update_articles)
 
     span_container.appendChild(li)
 }
@@ -74,6 +76,8 @@ function load_spans_for(month){
         bind_button_with_span(li,(bool)=>change_span(binded_span,month,bool))
         li.addEventListener("mouseover",update_articles)
         li.addEventListener("click",update_articles)
+        li.addEventListener("mousemove",update_articles)
+        li.addEventListener("mouseout",update_articles)
         current = next
 
         span_container.appendChild(li)

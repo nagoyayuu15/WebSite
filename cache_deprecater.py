@@ -12,9 +12,9 @@ except IndexError:
 files = glob.glob("./**/*.html",recursive=True)
 files.append("./portfolio/define_updated_time.js")
 
-CSS_VERSION = "3"
+CSS_VERSION = "4"
 FRAGMENT_VERSION = "3"
-SCRIPT_VERSION = "3"
+SCRIPT_VERSION = "5"
 
 # timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S%f")
 expired_at = (

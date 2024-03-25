@@ -18,6 +18,8 @@ function load_tags(){
     let all = document.querySelector(".feed.controler.tags .tag.all")
     all.addEventListener("click", update_articles)
     all.addEventListener("mouseover", update_articles)
+    all.addEventListener("mouseout", update_articles)
+    all.addEventListener("mousemove", update_articles)
     all.querySelector(".number_of_articles").innerHTML = weblog_index_obj.articles.length
 
     let tags_container = document.querySelector(".feed.controler.tags>ul")
@@ -28,39 +30,58 @@ function load_tags(){
         li.classList.add("toggle")
         li.innerHTML = `<div class="tag_name">${elem}</div><div class="number_of_articles">0</div>`;
 
-        li.addEventListener("click", update_articles)
-        li.addEventListener("mouseover", update_articles)
+        li.addEventListener("mouseover",update_articles)
+        li.addEventListener("click",update_articles)
+        li.addEventListener("mousemove",update_articles)
+        li.addEventListener("mouseout",update_articles)
         tags_container.appendChild(li)
     }
 }
 
-
+let update_article_number_indicator_for_tags_in_progress;
+let update_article_number_indicator_for_tags_task_stack;
 async function update_article_number_indicator_for_tags(){
+
+    let time_stamp = new Date()
+    update_article_number_indicator_for_tags_task_stack = time_stamp
+    
+    if(update_article_number_indicator_for_tags_in_progress!=null){
+        await update_article_number_indicator_for_tags_in_progress
+    }
+
+    if (time_stamp != update_article_number_indicator_for_tags_task_stack){
+        console.log("cancel:update_article_number_indicator_for_tags")
+        return
+    }
 
     const number_of_articles_in_span = document.querySelector(".feed.controler.tags .tag.all .number_of_articles")
     
+    const update_promises = []
+
     let count = 0
     for (let div of document.querySelectorAll(".feed.controler.time .span li.selected .number_of_articles")){
         count += Number(div.innerHTML)
     }
     
     //only to animate
-    (async(count) => {
-        for (let i=0;i<=count;i++) {
-            await new Promise(resolve=>setTimeout(resolve,1))
-            number_of_articles_in_span.innerHTML = i
-        }
-    })(count)
+    update_promises.push(
+        (async(count) => {
+            const step=5
+            for (let i=0;i<=step;i++) {
+                number_of_articles_in_span.innerHTML = Math.round(count*(i/step))
+                await new Promise(resolve=>setTimeout(resolve,20))
+            }
+        })(count)
+    )
 
     const tags = document.querySelectorAll(".feed.controler.tags .tag.hash")
-    const update_promises = []
     for (let tag of tags){
         const closure = async ()=>{
             let count = 0
             for (let article of weblog_index_obj.articles) {
-                await new Promise(resolve=>setTimeout(resolve,1))//allow blocking
                 count += article.tags.includes(tag.querySelector(".tag_name").innerHTML) && is_inspan(article.when)
                 tag.querySelector(".number_of_articles").innerHTML = count
+                await new Promise(resolve=>setTimeout(resolve,0))//allow blocking
             }
             return 
         }
@@ -68,7 +89,8 @@ async function update_article_number_indicator_for_tags(){
         update_promises.push(closure())
     }
 
-    await Promise.all(update_promises)
+    update_article_number_indicator_for_tags_in_progress = Promise.all(update_promises)
+    await update_article_number_indicator_for_tags_in_progress
     return
 }
 
