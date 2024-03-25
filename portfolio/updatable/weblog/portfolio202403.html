@@ -1,0 +1,16 @@
+<div class="title">Weblogを改良しました</div>
+<div class="tags">開発,コーディング,デザイン,Webページ</div>
+<div class="when">2024/03/25</div>
+<div class="main">
+    <p><ul>
+        <li>- タグの横に有効化された結果表示される記事の数を表示するようにしました。</li>
+        <li>- 期間の選択時にホバーするとその期間に投稿された記事の本数が見えるようにしました。</li>
+        <li>- タグの順番を（全期間の）記事数が多い順にしました（同列のものは文字順）。</li>
+    </ul>
+    これによって、より大きなカテゴリを示すタグが上に来るようになったので使いやすくなるんじゃないかと思います。</p>
+    <p>ロジックでは、
+    <code>await new Promise(resolve=>setTimeout(resolve,0))</code>
+    で、検索で長時間他の処理をブロックしないように気をつけました。
+    他にも細かい部分で色々調整が必要で大変でした。</p>
+    <a href="./skills.html#products#portfolio">portfolio</a>
+</div>
