@@ -30,8 +30,9 @@ function load_spans_for_all(){
     let latest_date = latest()
 
     li.className = "button toggle all selected"
-    li.innerHTML = earliest_date.getFullYear() + "-" + latest_date.getFullYear()
-    
+    li.innerHTML = `<div class="span_range">${earliest_date.getFullYear()}-${latest_date.getFullYear()}</div><div class="number_of_articles">0</div>`
+    li.querySelector(".number_of_articles").innerHTML = weblog_index_obj.articles.length
+
     bind_button_with_span(li,(bool)=>change_all_span(bool))
     li.addEventListener("mouseover",update_articles)
     li.addEventListener("click",update_articles)
@@ -47,20 +48,33 @@ function load_spans_for(month){
     let latest_date = latest()
     latest_date.setDate(1)
     latest_date.setMonth(11)
-    let current = earliest_date
+    var current = earliest_date
     while(current<=latest_date){
+        let next = structuredClone(current)
+        next.setMonth(current.getMonth()+month)
         let li = document.createElement("li")
         li.className = "button toggle m" + month
         if (month == 1){
-            li.innerHTML = current.getFullYear() + "/" + (current.getMonth()+1)
+            li.innerHTML = `<div class="span_range">${current.getFullYear()}/${current.getMonth()+1}</div><div class="number_of_articles">0</div>`
         }else{
-            li.innerHTML = current.getFullYear() + "/" + (current.getMonth()+1) + "-" + (current.getMonth()+month)
+            li.innerHTML = `<div class="span_range">${current.getFullYear()}/${current.getMonth()+1}-${current.getMonth()+month}</div><div class="number_of_articles">0</div>`
         }
+
+        (async()=>{
+            var count = 0
+            for (let article of weblog_index_obj.articles) {
+                setTimeout(1)
+                let date = date_parser(article.when)
+                count += current <= date && date < next
+                li.querySelector(".number_of_articles").innerHTML = count
+            }
+        })();
+
         let binded_span = structuredClone(current)
         bind_button_with_span(li,(bool)=>change_span(binded_span,month,bool))
         li.addEventListener("mouseover",update_articles)
         li.addEventListener("click",update_articles)
-        current.setMonth(current.getMonth()+month)
+        current = next
 
         span_container.appendChild(li)
 

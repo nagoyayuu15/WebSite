@@ -21,8 +21,8 @@ div.feed.feed_weblog_articles p {
 .feed.controler.tags .tag{
     background-color: hsl(0, 0%, 90%);
     color:hsl(0, 0%, 30%);
-    text-align: center;
-    justify-content: center;
+    text-align: start;
+    justify-content: start;
     align-items: center;
     position: relative;
     display: flex;
@@ -32,6 +32,33 @@ div.feed.feed_weblog_articles p {
     user-select: none;
     cursor: pointer;
 }
+
+.feed.controler.tags .tag .number_of_articles{
+    background-color: hsl(0, 0%, 94%);
+}
+
+.feed.controler.time .span ul li{
+    position: relative;
+}
+
+.feed.controler.time .span ul li .number_of_articles{
+    position: absolute;
+    opacity: 0;
+    transition: all 0.3s 0s ease;
+    font-weight: 600;
+}
+.feed.controler.time .span ul li .span_range{
+    opacity: 1;
+    transition: all 0.3s 0s ease;
+}
+
+.feed.controler.time .span ul li:hover .number_of_articles{
+    opacity: 1;
+}
+.feed.controler.time .span ul li:hover .span_range{
+    opacity: 0.3;
+}
+
 .feed.controler.tags .tag::before{
     content: "#"
 }
@@ -55,10 +82,12 @@ div.feed.feed_weblog_articles p {
 }
 .feed.controler.tags .tag::after{
     content:"";
-    width: 100%;
-    height: 100%;
+    width: 120%;
+    height: 120%;
     background-color: hsl(0, 0%, 0%, 0%);
     position: absolute;
+    top: -10%;
+    left: -10%;
     transition: all 0.3s 0s ease;
 }
 .feed.controler.tags .tag:hover::after{
@@ -300,7 +329,16 @@ div.feed.feed_weblog_articles p {
     }
     .dummy.article {
         height: 1800px;
-    }    
+    }
+
+    .feed.controler.tags .tag .number_of_articles {
+        border-radius: 20px;
+        margin-left: 5px;
+        padding-left: 10px;
+        padding-right: 10px;
+        min-width: 60px;
+        text-align: center;
+    }
 }
 @media screen and (min-width: 1000px) and (max-width: 1300px){/* for intermediate */
     .content {
@@ -342,8 +380,7 @@ div.feed.feed_weblog_articles p {
         border-radius: 5px;
         height: fit-content;
         width: 95%;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 5px;
     }
     .feed.controler.time{
         grid-column: 2;
@@ -455,9 +492,6 @@ div.feed.feed_weblog_articles p {
         margin-left: 50px;
         margin-right: 50px;
     }
-    .feed.controler.tags .tag{
-        height: fit-content;
-    }
     #bookshelf {
         grid-column: 2/4;
         grid-row: 3;
@@ -469,6 +503,14 @@ div.feed.feed_weblog_articles p {
     .dummy.article {
         height: 700px;
     }    
+    .feed.controler.tags .tag .number_of_articles {
+        border-radius: 10px;
+        padding-left: 2px;
+        padding-right: 2px;
+        min-width: 25px;
+        text-align: center;
+        margin-left: auto;
+    }
 } 
 
 @media screen and (min-width: 1300px) {/* for pc */
@@ -511,8 +553,7 @@ div.feed.feed_weblog_articles p {
         border-radius: 5px;
         height: fit-content;
         width: 95%;
-        padding-top: 5px;
-        padding-bottom: 5px;
+        padding: 5px;
     }
     .feed.controler.time{
         grid-column: 2;
@@ -624,9 +665,6 @@ div.feed.feed_weblog_articles p {
         margin-left: 50px;
         margin-right: 50px;
     }
-    .feed.controler.tags .tag{
-        height: fit-content;
-    }
     #bookshelf {
         grid-column: 2/4;
         grid-row: 3;
@@ -637,5 +675,14 @@ div.feed.feed_weblog_articles p {
     }
     .dummy.article {
         height: 700px;
-    }    
+    }
+
+    .feed.controler.tags .tag .number_of_articles {
+        border-radius: 10px;
+        padding-left: 2px;
+        padding-right: 2px;
+        min-width: 25px;
+        text-align: center;
+        margin-left: auto;
+    }
 } 

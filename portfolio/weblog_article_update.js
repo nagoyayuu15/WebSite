@@ -117,7 +117,9 @@ async function update_articles(){
 }
 
 function get_valid_tags(){
-    return Array.from(document.querySelectorAll(".feed.controler.tags .tag.hash.selected")).map(elem=>elem.innerText)
+    return Array.from(document.querySelectorAll(".feed.controler.tags .tag.hash.selected")).map(elem=>
+        (new DOMParser()).parseFromString(elem.innerHTML,"text/html").querySelector(".tag_name").innerText
+    )
 }
 
 function activate_tag_exclusively(activate){

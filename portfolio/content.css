@@ -10,7 +10,7 @@
 }
 
 .feed{
-    background-color: rgb(240, 240, 240);
+    background-color: hsl(0, 0%, 94%);
     z-index: 3001;
     overflow-wrap: break-word;
 }

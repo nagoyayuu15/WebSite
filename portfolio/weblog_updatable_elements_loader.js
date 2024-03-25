@@ -18,17 +18,29 @@ function load_tags(){
     let all = document.querySelector(".feed.controler.tags .tag.all")
     all.addEventListener("click", update_articles)
     all.addEventListener("mouseover", update_articles)
+    all.querySelector(".number_of_articles").innerHTML = weblog_index_obj.articles.length
+
     let tags_container = document.querySelector(".feed.controler.tags>ul")
-    weblog_index_obj.all_tags.forEach(elem => {
+    for(let elem of weblog_index_obj.all_tags){
         let li = document.createElement("li")
         li.classList.add("tag")
         li.classList.add("hash")
         li.classList.add("toggle")
-        li.innerHTML = elem
+        li.innerHTML = `<div class="tag_name">${elem}</div><div class="number_of_articles">0</div>`;
+
+        (async()=>{
+            var count = 0
+            for (let article of weblog_index_obj.articles) {
+                setTimeout(1)
+                count += article.tags.includes(elem)
+                li.querySelector(".number_of_articles").innerHTML = count
+            }
+        })();
+
         li.addEventListener("click", update_articles)
         li.addEventListener("mouseover", update_articles)
         tags_container.appendChild(li)
-    });
+    }
 }
 
 async function load_books(){
