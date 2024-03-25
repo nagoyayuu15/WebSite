@@ -132,7 +132,7 @@ function get_valid_tags(){
 function activate_tag_exclusively(activate){
     Array.from(document.querySelectorAll(".feed.controler.tags>ul>li")).map(
         tag=>{
-            if(tag.innerText==activate){
+            if(tag.querySelector(".tag_name").innerText==activate){
                 tag.classList.add("selected")
             }else{
                 tag.classList.remove("selected")
