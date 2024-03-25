@@ -12,7 +12,7 @@ except IndexError:
 files = glob.glob("./**/*.html",recursive=True)
 files.append("./portfolio/define_updated_time.js")
 
-CSS_VERSION = "4.2"
+CSS_VERSION = "4.3"
 FRAGMENT_VERSION = "4"
 SCRIPT_VERSION = "7"
 
