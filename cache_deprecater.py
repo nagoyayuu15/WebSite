@@ -3,6 +3,13 @@ import sys
 import os
 import datetime
 import re
+import json
+
+with open("./portfolio/updatable/SRC_VERSION.json") as fp:
+    data = json.load(fp)
+    CSS_VERSION = data["CSS_VERSION"]
+    FRAGMENT_VERSION = data["FRAGMENT_VERSION"]
+    SCRIPT_VERSION = data["SCRIPT_VERSION"]
 
 try:
     os.chdir(sys.argv[1])
@@ -11,10 +18,6 @@ except IndexError:
 
 files = glob.glob("./**/*.html",recursive=True)
 files.append("./portfolio/define_updated_time.js")
-
-CSS_VERSION = "4.3"
-FRAGMENT_VERSION = "4"
-SCRIPT_VERSION = "7"
 
 # timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S%f")
 expired_at = (

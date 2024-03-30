@@ -16,7 +16,7 @@ let comment_done = fetch("./updatable/comment.html" + url_param_updated_at).then
 })
 
 let history = document.querySelector(".feed_carrier>ul")
-let circle_svg=fetch("./circle.svg" + url_param_fragment_version).then(data=>data.text())
+let circle_svg=fetch("./img/circle.svg" + url_param_fragment_version).then(data=>data.text())
 let history_recodes = fetch("./updatable/history.json" + url_param_updated_at).then(data=>data.text()).then(json=>JSON.parse(json))
 let history_done = Promise.all([circle_svg,history_recodes]).then((res)=>{
     let circle = res[0]

@@ -37,6 +37,10 @@ img {
     width: 0px;
 }
 
+em {
+    font-weight: 600
+}
+
 /* to be responsible */
 @media screen and (max-width: 1000px) {
     .pc {
