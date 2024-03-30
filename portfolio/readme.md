@@ -9,9 +9,12 @@ cache対策、index更新を施す。
 - carrier -> history
 - index.html -> identity/html (後にindex.htmlは新たに作成)
 
+css,jsディレクトリを作成
+
 # 動的読み込みの関係
 
-(css,scriptの読み込みは記載を省略する)
+css,scriptの読み込みは記載を省略する
+画像は~/icon.svgを除いてすべてimgディレクトリに入っている。
 
 ~/portfolio/
 
@@ -131,7 +134,7 @@ divタグに埋め込まれる。
 ## contact.html
 
 divタグに埋め込まれる。
-要見出し(pタグ)
+*要見出し(pタグ)*
 
 ## products/\*.html, abilities/\*.html
 
