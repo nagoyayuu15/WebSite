@@ -1,6 +1,6 @@
 [
     {
-        "title":"読みやすいコードのガイドライン",
+        "title":"読みやすいコードの<br>ガイドライン",
         "id":"book202306",
         "img":"https://image.gihyo.co.jp/assets/images/cover/2022/9784297130367.jpg",
         "when":"2023/06",
@@ -16,7 +16,7 @@
         "link":"https://www.amazon.co.jp/Rust%E3%83%8F%E3%83%B3%E3%82%BA%E3%82%AA%E3%83%B3-%E6%8E%8C%E7%94%B0%E6%B4%A5%E8%80%B6%E4%B9%83/dp/4798069353"
     },
     {
-        "title":"大学4年間の統計学が10時間でざっと学べる",
+        "title":"大学4年間の統計学が<br>10時間で<br>ざっと学べる",
         "id":"book202402",
         "img":"https://m.media-amazon.com/images/I/A1QReu-nJnL._SY385_.jpg",
         "when":"2024/02",

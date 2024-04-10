@@ -304,6 +304,11 @@ div.feed.feed_weblog_articles p {
 
     .feed.feed_bookshelf h1{
         font-size: 40px;
+        display: flex;
+        height: 180px;
+        text-align: center;
+        align-items: center;
+        vertical-align: middle;
     }
     .feed.feed_bookshelf{
         padding: 20px
@@ -353,6 +358,14 @@ div.feed.feed_weblog_articles p {
         margin-top: 30px;
         margin-bottom: 30px;
         border-radius: 10px;
+    }
+    .binding{
+        max-width: 80%;
+        height: auto;
+    }
+    .article img{
+        width: 98%;
+        height: auto;
     }
 }
 @media screen and (min-width: 1000px) and (max-width: 1300px){/* for intermediate */
@@ -468,7 +481,7 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf .book img{
         height: 200px;
-        width: fit-content;
+        width: auto;
         margin-top: 5px;
     }
     .feed.feed_bookshelf a.book {
@@ -478,6 +491,11 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf .book h1{
         font-size: 30px;
+        display: flex;
+        height: 160px;
+        text-align: center;
+        align-items: center;
+        vertical-align: middle;
     }
     .feed.feed_bookshelf .book .when{
         font-size: 15px;
@@ -533,7 +551,7 @@ div.feed.feed_weblog_articles p {
         border-radius: 10px;
     }
     .article img{
-        width: 90%;
+        width: 98%;
         height: auto;
     }
 } 
@@ -651,7 +669,7 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf .book img{
         height: 200px;
-        width: fit-content;
+        width: auto;
         margin-top: 5px;
     }
     .feed.feed_bookshelf a.book {
@@ -661,6 +679,11 @@ div.feed.feed_weblog_articles p {
     }
     .feed.feed_bookshelf .book h1{
         font-size: 30px;
+        display: flex;
+        height: 160px;
+        text-align: center;
+        align-items: center;
+        vertical-align: middle;
     }
     .feed.feed_bookshelf .book .when{
         font-size: 15px;
@@ -718,7 +741,7 @@ div.feed.feed_weblog_articles p {
         border-radius: 10px;
     }
     .article img{
-        width: 90%;
+        width: 98%;
         height: auto;
     }
 } 

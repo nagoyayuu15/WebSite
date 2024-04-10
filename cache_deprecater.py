@@ -17,7 +17,7 @@ except IndexError:
     raise RuntimeError("Give an argument(directory-path).")
 
 files = glob.glob("./**/*.html",recursive=True)
-files.append("./portfolio/define_updated_time.js")
+files.append("./portfolio/js/define_updated_time.js")
 
 # timestamp = datetime.datetime.now(datetime.timezone.utc).strftime("%Y%m%d%H%M%S%f")
 expired_at = (
