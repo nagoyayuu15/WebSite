@@ -79,8 +79,16 @@ div.feed.feed_weblog_articles p {
     background-color: hsl(0, 0%, 90%);
     padding-left: 5px;
     padding-right: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     border-radius: 5px;
+    width: fit-content;
 }
+.article .main a.github{
+    display: block;
+    background-color: rgb(40, 40, 40);
+}
+
 
 .navigation{
     color: hsl(0, 0%, 70%);
@@ -367,6 +375,10 @@ div.feed.feed_weblog_articles p {
         width: 98%;
         height: auto;
     }
+    .article a.github>img{
+        height: 40px;
+        width: auto;
+    }
 }
 @media screen and (min-width: 1000px) and (max-width: 1300px){/* for intermediate */
     .content {
@@ -554,6 +566,10 @@ div.feed.feed_weblog_articles p {
         width: 98%;
         height: auto;
     }
+    .article a.github>img{
+        height: 20px;
+        width: auto;
+    }
 } 
 
 @media screen and (min-width: 1300px) {/* for pc */
@@ -707,8 +723,7 @@ div.feed.feed_weblog_articles p {
     }
     .article p{
         line-height: 150%;
-    }
-    .feed.feed_weblog_articles>.articles{
+    }    .feed.feed_weblog_articles>.articles{
         margin: 10px;
         margin-left: 50px;
         margin-right: 50px;
@@ -743,5 +758,10 @@ div.feed.feed_weblog_articles p {
     .article img{
         width: 98%;
         height: auto;
+    }
+
+    .article a.github>img{
+        height: 20px;
+        width: auto;
     }
 } 
