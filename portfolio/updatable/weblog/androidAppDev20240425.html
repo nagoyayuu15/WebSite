@@ -1,0 +1,9 @@
+<div class="title">JetpakComposeでドラッグアンドドロップを作る</div>
+<div class="tags">開発,コーディング,Androidアプリ</div>
+<div class="when">2024/04/25</div>
+<div class="main">
+    JetpackComposeでドラッグアンドドロップを実装しようとしたらどん詰りしました。
+    まずはMutableListを使ってしまってLazyListが全く再コンポースされずにつまり、その次はなぜか効かなくなるOffsetModifierに詰まっています(現在進行形で)。
+    とりあえず、Composableをclassのmethodにしてしまっていたので、これを解消して、
+    offsetなどはViewレイヤーの(クラスのインスタンスの)メンバとしてではなく、ViewModelレイヤーのメンバとして持たせようと思います。
+</div>
