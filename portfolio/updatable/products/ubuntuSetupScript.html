@@ -2,10 +2,28 @@
     <img src="./img/4375122_logo_ubuntu_icon.svg">
 </div>
 <div class="section">
-    <h1>ubuntuの半自動setupスクリプト</h1>
-    <p>
-
+    <h1>ubuntu setup script</h1>
+    <p>プロダクトというほどのものでもないのですが、賢いやり方を思いついたな〜と思ってます。
+        <br>
+        工夫は２つ。
+        <ul>
+            <li>- 00_xxx.sh という名前のスクリプトを順次実行していく形式をとったこと</li>
+            <li>- phaseシステムを導入したこと</li>
+        </ul>
+        です。
     </p>
-    <p>アイコンのクレジット表記: <a href="https://www.iconfinder.com/Flatart">Flatart@iconfinder</a></p>
-    <a class="github" href="https://github.com/"><img src="./img/GitHub_Logo_White.png" alt="GitHub"><img src="./img/github-mark-white.svg"></a>
+    <h4>命名と順次実行</h4>
+    <p>
+        まず、スクリプトの内容をすべてSETUP.shに書くのではなく、tasksに分離して、その中に入っているスクリプトを順次実行する形にしてみました。
+        この方式だととても見通しが立ちやすいし、スクリプトの有効化や無効化も容易です。新たなスクリプトを組み込みたいときはファイルを作成すればいいだけなので、拡張性も確保できていい事ずくめでした。
+        また、頭に数字をつけて命名することで、依存関係対策もバッチリです。依存元を先に実行するように命名を調整できます。
+    </p>
+    <h4>phaseシステム</h4>
+    <p>
+        上の工夫によって基本的には事足りたのですが、ただ一つ、gnome-extensionsだけはうまく行きませんでした。コマンドラインで<a>gnome-extensions install</a>を使っても、なぜか拡張機能のインストールは行われませんでした。調査を進めると、その原因は再起動をしていないために、プログラムが完全にインストールされていなかったこと、だったのです。
+        <br>そこで、phaseシステムを導入しました。これは自動で再起動を行うためのシステムです。これによってユーザーは、コーヒーをすすりながら、たまにパスワードを入力したりエンターを押すだけでインストールすることができるようになったのです。
+    </p>
+    
+    <p>アイコンのクレジット: <a href="https://www.iconfinder.com/Flatart">flatart@iconfiner</a></p>
+    <a class="github" href="https://github.com/HBenpitsu/bokuga-kangaeta-saikyo-no-ubuntu-setup-scripts"><img src="./img/GitHub_Logo_White.png" alt="GitHub"><img src="./img/github-mark-white.svg"></a>
 </div>

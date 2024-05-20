@@ -1,0 +1,22 @@
+<div class="button">
+    <img src="./img/calender_icon_8.svg">
+</div>
+<div class="section">
+    <h1>gcanya</h1>
+    <p>
+        課題を自動でGoogleカレンダーに追加してくれる拡張機能です。
+        jackhackというサークルのイベントで作ったものをforkして継続開発しています。
+    </p>
+    <p>
+        ３日間の突貫工事で作られたものですので、ひとまずはリファクタリング中です。
+        リファクタリングするにあたっては
+        <ul>
+            <li>ドキュメンテーションを豊富に書くこと</li>
+            <li>リテラルの使用をなるべく避けること</li>
+        </ul>
+        を意識しています。
+        <br>使用技術はバックエンドではリバースプロキシにNginx,アプリケーションサーバーにFastAPIです。もちろんGoogleCalenderAPIも叩きますので、OAuthなども取り扱っています。
+        フロントはReact@TSで書かれています。自分が主に担当したところはバックエンド側だったので、フロント側のことは完全には把握できていませんが、TACTというSakaiから派生した名古屋大学のLMSのAPIを叩いたり、UIを作ったりということを取り扱っています。将来的には課題の所要時間の自動推定なんかもフロント側で行うのがいいのかなと思っています。
+    </p>
+    <a class="github" href="https://github.com/HBenpitsu/gcanya"><img src="./img/GitHub_Logo_White.png" alt="GitHub"><img src="./img/github-mark-white.svg"></a>
+</div>

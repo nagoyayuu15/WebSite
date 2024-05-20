@@ -361,6 +361,16 @@
     {
         "type":"trivial",
         "when":"2024/05",
+        "event":"サークルのハッカソンに参加する",
+        "supplement":["jackhackという3日間ぶっ続けでアプリを一つ作るというイベントに参加。"],
+        "link":{
+            "href":"./skills.html#products#gcanya",
+            "text":"プロダクトページへ"
+        }
+    },
+    {
+        "type":"trivial",
+        "when":"2024/05",
         "event":"塾講師をやめ学習に専念する<br class=\"sp\">（予定）",
         "supplement":[null],
         "link":{
