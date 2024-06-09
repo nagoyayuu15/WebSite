@@ -185,6 +185,16 @@
         }
     },
     {
+        "type":"trivial",
+        "when":"2023/4",
+        "event":"フィンランド語を始める",
+        "supplement":[],
+        "link":{
+            "href":null,
+            "text":null
+        }
+    },
+    {
         "type":"important",
         "when":"2023/4",
         "event":"名古屋大学情報学部コンピュータ科学科入学",
@@ -292,7 +302,7 @@
         "type":"important",
         "when":null,
         "event":"Rustを独学する。",
-        "supplement":["ニューラルネットワーク作ろうとしたが断念。再チャレンジ予定"],
+        "supplement":["ニューラルネットワーク作ろうとしたが断念。"],
         "link":{
             "href":"./weblog.html#bookshelf#book202311",
             "text":"本棚へ"
@@ -302,7 +312,7 @@
         "type":"important",
         "when":null,
         "event":"C言語の授業を受ける。",
-        "supplement":["評定はA+ (成績公開直後の評定Aから位置段階上がりました。)"],
+        "supplement":["評定はA+"],
         "link":{
             "href":null,
             "text":null
@@ -370,9 +380,29 @@
     },
     {
         "type":"trivial",
-        "when":"2024/05",
-        "event":"塾講師をやめ学習に専念する<br class=\"sp\">（予定）",
+        "when":null,
+        "event":"名古屋大学企業展に参加する",
+        "supplement":["学部二年生ながら業界に関する知見を深めるため2日に渡るイベントに参加"],
+        "link":{
+            "href":null,
+            "text":null
+        }
+    },
+    {
+        "type":"trivial",
+        "when":null,
+        "event":"塾講師を辞める。",
         "supplement":[null],
+        "link":{
+            "href":null,
+            "text":null
+        }
+    },
+    {
+        "type":"trivial",
+        "when":"2024/06",
+        "event":"大学祭でサークルの企画担当をする。",
+        "supplement":["超絶多忙な中を乗り切った（予定）"],
         "link":{
             "href":null,
             "text":null
